@@ -1,3 +1,5 @@
+// 1 - Jan 9, 2023
+
 #include <stdio.h>
 
 int no_of_duplicates(int arr[], int s){
