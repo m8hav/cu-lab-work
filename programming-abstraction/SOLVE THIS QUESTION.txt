@@ -1,3 +1,0 @@
-given a number n
-
-find sum of all numbers between 1 and n that are either divisible by 3 or by 5

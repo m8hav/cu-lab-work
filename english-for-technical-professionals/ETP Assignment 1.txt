@@ -1,0 +1,34 @@
+Name: Madhav Goyal
+ID: 2011981262
+Section: A1
+Batch: 2021
+
+
+Q1. How can tablets contribute to communication between design and construction practitioners?
+
+Lack of adequate communication tools can cause information losses in construction projects. It's difficult to manage paper-based documents, especially in the case of huge projects.
+The most efficient way for construction personnel to manage information on sites is to retrieve or capture information at any point and at any time when they need it, which is possible with the use of tablets.
+Tablets can be used to access construction plans, view them, make changes quickly, etc. which means access to plans and documents is much easier and more convenient. Digital markup and annotations are possible which allow sharing info with other team members in real-time that directly enhances communication, for example, video conferencing.
+It's easier and faster to manage projects for the engineers. Tablets can also be used for data collection and analysis in the field, for example, monitoring, testing and quality control. Then this data can be shared and analyzed for better decision making.
+Strengths of using tablets to communicate between design and construction practitioners include mobility, access to information, digital markup and annotation, stability in decision making and collective approach.
+It helps a lot in making the right decisions fast and efficient by using various software made for construction purposes.
+
+
+Q2. What are the strengths and challenges of using tablets to communicate between design and construction practitioners?
+
+However, there are also some challenges to using tablets. Since it requires completely new resources and reorganizing the work culture which is not a habitat of manual construction practitioners, thus they must be skilled in using the latest tech and complex software to generate the most efficient outcome.
+
+Moreover, tablets are dependent on technology and may be subject to technical difficulties or failures.
+Tablets can be expensive for a team with a large number of members. A major problem could be protecting confidential data, which means security measures are needed to be implemented to protect sensitive information.
+
+
+Q3. What initiatives can lead to tablets providing better communication between design and construction practitioners?
+
+Some initiatives can lead to providing better communication between design and construction practitioners.
+    Adoption of common software and apps.
+    Training and support to enhance technical skills.
+    Cloud-based storage and sharing.
+    Integration with other physical systems or devices like sensor networks, connections, etc.
+    Regular meetings should be held to discuss the issues they are facing in the project development technically.
+
+Overall, by implementing these initiatives, tablets can provide better communication and collaboration between design and construction practitioners, leading to more efficient and successful construction projects.

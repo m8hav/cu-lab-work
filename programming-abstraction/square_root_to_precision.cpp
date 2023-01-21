@@ -1,3 +1,6 @@
+// SOURCE:
+// https://www.geeksforgeeks.org/find-square-root-number-upto-given-precision-using-binary-search/
+
 #include <iostream>
 using namespace std;
 
@@ -21,7 +24,7 @@ float square_root_to_precision(int n, int p){
     }
     
     // getting precise with increment of precision using iteration
-    int increment = 0.1;
+    float increment = 0.1;
     for (int i = 0; i < p; i++){
         while (ans*ans <= n){
             ans += increment;
@@ -29,12 +32,13 @@ float square_root_to_precision(int n, int p){
         ans -= increment;
         increment /= 10;
     }
-    cout << "done";
     return ans;
 }
 
 int main() {
-    cout << "start";
-    cout << square_root_to_precision(90, 5);
+    cout << square_root_to_precision(90, 3) << endl;
+    // PROBLEM WITH 90 - IT OUTPUTS 5 PRECISION FOR 3+ GIVEN PRECISION
+    cout << square_root_to_precision(50, 3) << endl;
+    cout << square_root_to_precision(10, 4) << endl;
     return 0;
 }
