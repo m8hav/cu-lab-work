@@ -62,6 +62,7 @@ void complement_print
 
 int main()
 {
+    printf("\n");
     float arr1[][2] = {
         {0, 0.5},
         {1, 0.7},
@@ -74,12 +75,15 @@ int main()
     };
     int main_size = sizeof(arr1)/sizeof(arr1[0]);
 
+    printf("Union of arr1 and arr2:\n");
     union_print(main_size, arr1, arr2);
     printf("\n");
 
+    printf("Intersection of arr1 and arr2:\n");
     intersection_print(main_size, arr1, arr2);
     printf("\n");
 
+    printf("Complement of arr1:\n");
     complement_print(main_size, arr1);
     printf("\n");
 
