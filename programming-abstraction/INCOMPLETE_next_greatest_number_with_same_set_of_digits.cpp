@@ -29,10 +29,10 @@ using namespace std;
 
 int main(){
     
-    // string number = "8580474936";
+    // string number = "4597058631";    // WRONG ANSWER
     // string number = "218765";
     // string number = "1234";
-    string number = "4321";
+    string number = "4321";             // ERROR
     int s = number.length();
 
     cout << "Original Number String: " << number << endl;
@@ -43,8 +43,8 @@ int main(){
         if(number[i-1] < number[i]) break;
     }
     cout << "step 1 done" << endl;
-    // STEP 2
     
+    // STEP 2
     int j, sm_sub = s-1;
     for (j = i; j < s; j++){
         if (number[j] < number[sm_sub] && number[j] > number[i-1]) sm_sub = j;
@@ -55,6 +55,7 @@ int main(){
     cout << "step 2 done" << endl;
     
     // STEP 3
+    // ERROR HERE WHEN NUMBER IN COMPLETE DESCENDING ORDER
     string next_greatest = number;
     sort(next_greatest.begin()+i, next_greatest.end());
     cout << "step 3 done" << endl;

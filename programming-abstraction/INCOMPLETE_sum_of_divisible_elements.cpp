@@ -23,6 +23,7 @@ int sum_of_divisible_elements_using_sum_till_n_ap_derivation(int n, int div_1, i
     return sum;
 }
 
+// INCOMPLETE
 int sum_of_divisible_elements_using_ap_sum_till_n(int n, int div_1, int div_2){
     int sum = 0;
     int div_1_n = n/div_1;

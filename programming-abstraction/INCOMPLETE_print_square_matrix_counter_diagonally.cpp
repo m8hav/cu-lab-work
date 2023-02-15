@@ -13,6 +13,7 @@ using namespace std;
 
 #define A_SIZE 50
 
+// NOT TESTED YET
 void sirs_method(int n, int arr[A_SIZE][A_SIZE]){
     int r = 0, c;
     for (c = 0; c < n; c++){
@@ -32,6 +33,7 @@ void sirs_method(int n, int arr[A_SIZE][A_SIZE]){
     }
 }
 
+// DOESN'T WORK FOR SECOND LOOP
 void my_method(int n, int arr[A_SIZE][A_SIZE]){
     int t, i, j;
     for (t = 0; t < n; t++){
