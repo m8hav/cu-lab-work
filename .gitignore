@@ -1,8 +1,9 @@
-.vscode
-c-language/*.exe
-soft-computing/*.exe
-data-structures/*.exe
-programming-abstraction/*.exe
+# */.vscode
+*.exe
+# c-language/*.exe
+# soft-computing/*.exe
+# data-structures/*.exe
+# programming-abstraction/*.exe
 dbms/DBMS (CST101) PPTS & DOCS
 
 ## Ignore Visual Studio temporary files, build results, and
