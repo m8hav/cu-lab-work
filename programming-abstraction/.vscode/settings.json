@@ -2,6 +2,7 @@
     "files.associations": {
         "*.cpp": "cpp",
         "stdio.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "array": "cpp"
     }
 }

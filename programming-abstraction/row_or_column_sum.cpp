@@ -29,6 +29,8 @@
 // 43
 // 60
 
+// ==============================
+
 // INPUT:
 // 2
 // 5 2
@@ -49,6 +51,26 @@
 // OUTPUT:
 // 6
 // 10
+
+// ==============================
+
+// INPUT:
+// 4
+// 1000000 999
+// 913 C
+// 100 9
+// 13 C
+// 1000000 999
+// 1000 R
+// 100 10
+// 13 R
+
+// OUTPUT:
+// 500913413
+// 0
+// 997502499
+// 0
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -83,7 +105,7 @@ long solveQuery_fast(int N, int W, int i, char ch)
         while (k <= i * W and k <= N)
             sum += k++;
     }
-    else
+    else if(i <= W)
     {
         k = i;
         while (k <= N)
@@ -119,7 +141,7 @@ long solveQuery_slow(int N, int W, int i, char ch)
         }
     }
 
-    // printing new array
+    // // printing new array
     // for (int z = 0; z < nr; z++)
     // {
     //     for (int y = 0; y < W; y++)
@@ -152,7 +174,7 @@ int main()
     {
         cin >> n >> w >> i >> c;
         cout << solveQuery_fast(n, w, i, c) << endl;
-        cout << solveQuery_slow(n, w, i, c) << endl;
+        // cout << solveQuery_slow(n, w, i, c) << endl;
     }
     return 0;
 }
