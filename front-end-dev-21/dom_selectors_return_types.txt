@@ -1,4 +1,4 @@
-Selector - Return Type
+SELECTOR - RETURN TYPE
 
 getElementById - single element
 getElementByClassName - HTML Collection
