@@ -6,7 +6,7 @@
 
 // EXAMPLE:
 
-// INPUT:
+// INPUT 1:
 // 2                            // Test Cases
 // abcd abc Xyz                 // string (TC-1)
 // abc                          // word (TC-1)
@@ -17,6 +17,12 @@
 // 1
 // 2
 
+// INPUT 2:
+// 2
+//  
+//  
+// (try spaces in word for string)
+// (CQ Test Case 4 in Mukesh sir's WhatsApp)
 
 #include <iostream>
 using namespace std;
