@@ -13,7 +13,7 @@
 // g++ min_elements_to_make_consecutive_array.cpp -o min_elements_to_make_consecutive_array && min_elements_to_make_consecutive_array
 
 #include <iostream>
-// #include <climits>   // INT16_MAX AND INT16_MIN somehow work even without this header
+// #include <climits>   // INT16_MAX and INT16_MIN somehow work even without this header
 using namespace std;
 
 int main()
