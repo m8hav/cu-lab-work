@@ -1,0 +1,10 @@
+FEE ST3 MARKING SCHEME:
+
+Topics										Marks
+HTML/CSS									10
+Intro to JavaScript, Arrays & Objects		10
+DOM + LocalStorage							10
+	above two points combined 				+ 5
+React										5
+
+No React coding questions in ST3 but has MCQs worth 5 marks asking output of the code

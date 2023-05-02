@@ -71,7 +71,6 @@
 // 997502499
 // 0
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -87,9 +86,33 @@ using namespace std;
  *   The sum of numbers in the row or column, as per the query
  */
 
+// FASTEST METHOD
+// Uses AP Sum formulas
+// Time Complexity: O(1)
+long solveQuery_fastest(int N, int W, int i, char ch)
+{
+
+    if (i < 0)
+        return 0;
+    int nr = N / W;
+    if (N % W != 0)
+        nr++;
+
+    long sum;
+    if (ch == 'C' && i <= W){
+        sum = 0;
+        // PENDING HERE
+    }
+
+    // PENDING HERE
+
+    return sum;
+}
+
 // FASTER METHOD
+// Direct for loop adding elements with difference
 // Time Complexity: (N/W)+1 or W, whichever is greater
-long solveQuery_fast(int N, int W, int i, char ch)
+long solveQuery_faster(int N, int W, int i, char ch)
 {
     if (i < 0)
         return 0;
@@ -105,7 +128,7 @@ long solveQuery_fast(int N, int W, int i, char ch)
         while (k <= i * W and k <= N)
             sum += k++;
     }
-    else if(i <= W)
+    else if (i <= W)
     {
         k = i;
         while (k <= N)
@@ -173,7 +196,7 @@ int main()
     for (int k = 0; k < t; k++)
     {
         cin >> n >> w >> i >> c;
-        cout << solveQuery_fast(n, w, i, c) << endl;
+        cout << solveQuery_faster(n, w, i, c) << endl;
         // cout << solveQuery_slow(n, w, i, c) << endl;
     }
     return 0;
