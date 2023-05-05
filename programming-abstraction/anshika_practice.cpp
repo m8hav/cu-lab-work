@@ -18,7 +18,8 @@ class Shape {
         width = w;
         height = h;
     }
-    
+    ~Shape(){}
+
     int getArea(){
         return width*height;
     }
@@ -29,17 +30,14 @@ class Shape {
         return height;
     }
 };
-class box: public Shape{
+class Square : public Shape {
     
 };
-// class Square : public Shape {
-
-// }
 
 int main(){
 
     cout << "start" << endl;
-    // Shape s;
+
     int w, h;
     cin >> w >> h;
 
@@ -52,6 +50,5 @@ int main(){
     cout << s.getWidth() << endl;
     cout << s.getHeight() << endl;
     
-
-
+    delete &s;
 }
