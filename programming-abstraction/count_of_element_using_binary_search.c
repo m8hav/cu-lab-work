@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int find_first_occurence(int arr[], int s, int k){
+int find_first_occurrence(int arr[], int s, int k){
     int low = 0, high = s-1, mid = 0;
 
     while(arr[mid] != k || arr[mid-1]==k){
@@ -15,7 +15,7 @@ int find_first_occurence(int arr[], int s, int k){
         }
     }
 }
-int find_last_occurence(int arr[], int s, int k){
+int find_last_occurrence(int arr[], int s, int k){
     int low = 0, high = s-1, mid = 0;
 
     while(arr[mid] != k || arr[mid+1]==k){
@@ -41,12 +41,12 @@ int main(){
     int k = 0;
     printf("\nElement: %d\n", k);
 
-    int first_occurence = find_first_occurence(arr, s, k);
-    printf("\nFirst Occurence: %d\n", first_occurence);
-    int last_occurence = find_last_occurence(arr, s, k);
-    printf("\nLast Occurence: %d\n", last_occurence);
+    int first_occurrence = find_first_occurrence(arr, s, k);
+    printf("\nFirst occurrence: %d\n", first_occurrence);
+    int last_occurrence = find_last_occurrence(arr, s, k);
+    printf("\nLast occurrence: %d\n", last_occurrence);
 
-    int count = last_occurence-first_occurence+1;
+    int count = last_occurrence-first_occurrence+1;
     printf("\nCount: %d\n", count);
 
     return 0;
