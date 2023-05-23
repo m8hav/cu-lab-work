@@ -10,7 +10,6 @@
 
 <body>
 
-
     <script>
         async function functionFetch() {
             let response = await fetch('https://reqres.in/api/users?page=2');
@@ -24,6 +23,7 @@
                 console.log('HTTP Error code ' + response.status);
             }
         }
+        
         functionFetch();       
     </script>
 </body>

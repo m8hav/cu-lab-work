@@ -35,13 +35,13 @@
         }
 
         function saveData(){
-            // let data = returnData();            
-            let data = [];
+            let data = returnData();            
             data.push(txtBox.value);
             localStorage.setItem('saveData', JSON.stringify(data));
         }
 
         function getData(){
+            ul.innerHTML = "";
             let data = [];
             data = returnData();
             
