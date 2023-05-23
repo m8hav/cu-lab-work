@@ -76,7 +76,15 @@ class Complex{
     void show(){
         cout << real << " + " << imag << "i" << endl;
     }
+    friend void increment_complex(Complex *, int);
 };
+
+// External function to increment real and imaginary part of complex number
+// ONLY WORKS IF DATA MEMBERS real AND imag ARE PUBLIC
+void increment_complex(Complex * c, int inc){
+    (*c).real += inc;
+    (*c).imag += inc;
+}
 
 
 int main(){
@@ -117,6 +125,9 @@ int main(){
     // post incrementing Complex object
     c2++;
     c2.show();
+
+    increment_complex(&c3, 5);
+    c3.show();
 
     return 0;
 }
