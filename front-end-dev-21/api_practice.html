@@ -30,7 +30,14 @@
 
         async function fetch_url(api_url){
             try {
-                let response = await fetch(api_url);
+                let response = await fetch(api_url, {
+                    "method": "GET",
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    // GET requests cannot have a body
+                    // "body": JSON.stringify({data: "data"})
+                });
                 console.log("API Fetched successfully with response:\n", response);
                 if (response.ok) {
                     let data = await response.json();
@@ -44,11 +51,8 @@
             }
         }
 
-        // fetch_url(url_200);
-
-        // console.log("after fetch");
-
-        let number = 10;
+        fetch_url(url_200);
+        console.log("after fetch");
 
         function returnPromise(number) {
             let outputPromise = new Promise((res, rej) => {
@@ -69,14 +73,21 @@
             return outputPromise;
         }
 
-        returnPromise(number)
-        .then((res) => {
-            console.log("Response success with: ", res);
-        })
-        .catch((rej) => {
-            console.log("Response rejected with: ", rej);
-        });
+        async function returnCustomPromise(number) {
+            try {
+                let output = await returnPromise(number);
+                console.log("Response success with: ", output);
+            } catch (error) {
+                console.log("Response rejected with: ", error);
+            }
+        }
 
+        let number = 10;
+
+        returnCustomPromise(number);
+        console.log("after returnPromise");
+
+        // outputs pending promise
         // let output = fetch(url_200);
         // console.log(output);
         
