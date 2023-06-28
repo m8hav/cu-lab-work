@@ -1,6 +1,6 @@
 import React from "react";
 
-class Clock extends React.Component () {
+class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,7 +10,7 @@ class Clock extends React.Component () {
 
     render () {
         return (<h1>
-            {this.state.time}
+            {this.state.time.toString()}
         </h1>);
     }
 

@@ -40,3 +40,28 @@
 .active {
   background-color: red;
 }
+
+#navbarID{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: 30%;
+  position: absolute;
+}
+
+#right-part{
+  height: 100%;
+  width: 65%;
+  background-color: "black";
+  position: absolute;
+  right: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
