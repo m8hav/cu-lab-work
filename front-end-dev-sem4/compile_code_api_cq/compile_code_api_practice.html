@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const execute_code_api_url = "https://cors-anywhere.herokuapp.com/" + "https://codequotient.com/api/executeCode";
+        const code_result_api_url = "https://cors-anywhere.herokuapp.com/" + "https://codequotient.com/api/codeResult/${codeId}";
+
+        let sample_code = "print('abc')";
+        let sample_code_language_id = 0;
+
+        let execute_code_data = {
+            "code": sample_code,
+            "langId": sample_code_language_id
+        }
+
+        async function send_execute_code_request(body_data) {
+            let res = await fetch(execute_code_api_url,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(body_data)
+            })
+            console.log(res);
+            let res_obj = await res.json();
+            console.log(res_obj);
+            return res_obj;
+        }
+
+        console.log(send_execute_code_request(execute_code_data));
+        
+    </script>
+</body>
+</html>

@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.cpp": "cpp",
-        "stdio.h": "c",
-        "iostream": "cpp",
-        "array": "cpp",
-        "new": "cpp"
-    }
-}

@@ -1,0 +1,6 @@
+Direct - Function calls itself. Example - Factorial
+Indirect - calls 2nd function that calls first again. Example - (FIND PROPER EXAMPLE), forcing factorial to use 2 functions
+Tail - the result of last function call is the one returned from the entire function i.e. there is no operation performed on result of final function call before returning. Example - Binary Search - return mid;
+Non-Tail - when operations are performed on result of final function call before returning in the end. Example - Factorial - return n*fact(n-1)
+Tree - calling itself (or another as indirect function) multiple times in the same function block (if conditions make their own blocks). Factorial - m = fun(n-1); n = fun(n+1);
+Linear - calling function only once in one block. Example - Factorial

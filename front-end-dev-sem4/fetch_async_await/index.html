@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch with Async and Await</title>
+</head>
+
+<body>
+
+    <script>
+        let data_url = 'https://reqres.in/api/users?page=2';
+
+        async function fetch_data_async(url) {
+            let response = await fetch(url);
+            console.log(response);
+            console.log(typeof response);
+            if (response.ok) {
+                let response_obj = await response.json();
+                console.log(response_obj);
+                console.log(typeof response_obj);
+
+                let response_data = response_obj.data;
+                console.log(response_data);
+                console.log(typeof response_data);
+            }
+        }
+
+        function fetch_data_then(url) {
+            fetch(url)
+                .then(response => {
+                    console.log(response);
+                    console.log(typeof response);
+                    
+                    return response.json()
+                })
+                // last .then returns same as the bottom one
+                // .then(response => response.json())
+                .then(response_obj => {
+                    console.log(response_obj);
+                    console.log(typeof response_obj);
+                    
+                    console.log(response_obj.data)
+                    console.log(typeof response_obj.data)
+                    
+                })
+        }
+
+        fetch_data_async(data_url);
+        // fetch_data_then(data_url);
+    </script>
+</body>
+
+</html>

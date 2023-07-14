@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="input_main" id="input_main"/>
+
+    <button id="savebtn" onclick="saveData()">Save Data</button>
+    <button id="getbtn" onclick="getData()">Get Data</button>
+    <button id="deletebtn" onclick="deleteData()">Delete Data</button>
+
+    <ul id="output"></ul>
+
+    <script>
+        let input_main = document.getElementById("input_main");
+
+        let output_ul = document.getElementById("output");
+
+        function saveData(){
+            let data_arr = [];
+            let old_data = JSON.parse(localStorage.getItem("data"));
+            if (! old_data) old_data = [];
+            data_arr = data_arr.concat(old_data);
+
+            let input_value = input_main.value;
+            data_arr.push(input_value);
+
+            localStorage.setItem("data", JSON.stringify(data_arr));
+        }
+
+        function getData(){
+            let lsvalue = JSON.parse(localStorage.getItem("data"));
+            if (! lsvalue) lsvalue = [];
+
+            output_ul.innerHTML = "";
+
+            for (let i = 0; i < lsvalue.length; i++){
+                let item = document.createElement("li");
+                item.innerHTML = lsvalue[i];
+                output_ul.appendChild(item);
+            }
+        }
+
+        function deleteData(){
+            localStorage.removeItem("data");
+        }
+    </script>
+</body>
+</html>

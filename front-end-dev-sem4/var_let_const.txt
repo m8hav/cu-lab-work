@@ -1,0 +1,16 @@
+var
+global scope
+redeclaration (not initialization) allowed
+variable hoisting (var is treated as if declared at top but not initialized)
+
+let
+block (curly braces) scope
+no redeclaration (not initialization) allowed
+no variable hoisting
+
+const
+same as let but value can't be changed here i.e. immutable
+block scope
+no redeclaration or change in value
+has to be initialized along with declaration or gives error since const assumes the value is not to be changed so it should be specified already
+no variable hoisting

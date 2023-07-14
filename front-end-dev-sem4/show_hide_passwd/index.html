@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Password</title>
+
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #333;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #passwd{
+            width: 20rem;
+            height: 2rem;
+            padding: 0.5rem;
+            font-size: 2rem;
+        }
+        #show{
+            width: 4rem;
+            height: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <input type="password" name="passwd" id="passwd">
+            <input type="checkbox" name="show" id="show">
+        </form>
+    </div>
+
+    <script>
+        const main_input = document.getElementById("passwd");
+        const show = document.getElementById("show");
+        
+        show.onchange = () => {
+            if(show.checked){
+                main_input.type = "text";
+                setTimeout(() => {
+                    main_input.type = "password";
+                    show.checked = false;
+                }, 1000);
+            }else{
+                main_input.type = "password";
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let url_200 = "https://reqres.in/api/users?page=2";
+        let url_404 = "https://reqres.in/api/";
+        let url_404_2 = "https://apichallenges.herokuapp.com/todo";
+
+        // fetch(url_200)
+        // .then((res) => {
+        //     console.log("API Fetched successfully with response:\n", res);
+        //     return res.json();
+        // }).then((data_success_obj) => {
+        //     console.log("Data successfully fetched: ", data_success_obj);
+        // })
+        // // .catch doesn't work for every .then so can't use multiple .catch
+        // // The last catch gets called for errors in any stage
+        // // .catch((data_fail_obj) => {
+        // //     console.log("Data fail fetched: ", data_fail_obj);
+        // // })
+        // .catch((err) => {
+        //     console.log("API Fetched unsuccessfully with error:\n", err);
+        // });
+
+        async function fetch_url(api_url){
+            try {
+                let response = await fetch(api_url, {
+                    "method": "GET",
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    // GET requests cannot have a body
+                    // "body": JSON.stringify({data: "data"})
+                });
+                console.log("API Fetched successfully with response:\n", response);
+                if (response.ok) {
+                    let data = await response.json();
+                    console.log("Data successfully fetched: ", data);
+                } else {
+                    console.log("Data fail fetched");
+                }
+            }
+            catch (error) {
+                console.log("API Fetched unsuccessfully with error:\n", error);
+            }
+        }
+
+        fetch_url(url_200);
+        console.log("after fetch");
+
+        function returnPromise(number) {
+            let outputPromise = new Promise((res, rej) => {
+                if (number > 7) {
+                    // let another_promise = new Promise((response, reject) => {
+                    //     if (number > 7) {
+                    //         response("number > 10");
+                    //     } else {
+                    //         reject("number <= 10");
+                    //     }
+                    // });
+                    // res(another_promise);
+                    res(`Promise success with: ${number}`);
+                } else {
+                    rej(`Promise rejected with: ${number}`);
+                }
+            })
+            return outputPromise;
+        }
+
+        async function returnCustomPromise(number) {
+            try {
+                let output = await returnPromise(number);
+                console.log("Response success with: ", output);
+            } catch (error) {
+                console.log("Response rejected with: ", error);
+            }
+        }
+
+        let number = 10;
+
+        returnCustomPromise(number);
+        console.log("after returnPromise");
+
+        // outputs pending promise
+        // let output = fetch(url_200);
+        // console.log(output);
+        
+    </script>
+</body>
+</html>

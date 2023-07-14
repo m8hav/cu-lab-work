@@ -1,9 +1,0 @@
-{
-    "id": "1",
-    "name": {
-        "firstName":"John",
-        "lastName":"Doe"
-    },
-    "age": 12,
-    "skill":["HTML","CSS","JavaScript","PHP"]
-}

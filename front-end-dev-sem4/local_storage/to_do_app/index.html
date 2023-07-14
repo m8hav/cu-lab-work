@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            height: 100%;
+            margin: 0;
+        }
+        body > *{
+            width: 50%;
+            height: 80%;
+        }
+        .strike{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <ul id="output_ul"></ul>
+    <input type="text" id="main_input"/>
+
+    <script>
+        let output_ul = document.getElementById("output_ul");
+        let main_input = document.getElementById("main_input");
+
+        function add_new(){
+            let value = main_input.value;
+
+            // local storage
+            let ls_value_arr = [];
+            let old_ls_value = JSON.parse(localStorage.getItem("todos"));
+            if (! old_ls_value){
+                old_ls_value = [];
+            }
+
+            ls_value_arr = ls_value_arr.concat(old_ls_value);
+            ls_value_arr.push(value);
+
+            localStorage.setItem("todos", JSON.stringify(ls_value_arr));
+            
+            render_todos();
+
+            main_input.value = "";
+        }
+
+        main_input.addEventListener("keydown", function(event){
+            if (event.key == "Enter"){
+                add_new();
+            }
+        })
+
+        function render_todos(){
+            let old_ls_value_arr = JSON.parse(localStorage.getItem("todos"));
+            if (! old_ls_value_arr){
+                old_ls_value_arr = [];
+            }
+
+            for (let i = 0; i < old_ls_value_arr.length; i++){
+
+                let item_value = old_ls_value_arr[i];
+
+                let item = document.createElement("li");
+                output_ul.appendChild(item);
+
+                let item_text = document.createElement("p");
+                item_text.innerHTML = item_value;
+                item.appendChild(item_text);
+
+                let cross_button = document.createElement("button");
+                cross_button.innerHTML = "X";
+                item.appendChild(cross_button);
+
+                cross_button.onclick = function(){
+                    item.remove();
+                };
+                
+                let checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                item.appendChild(checkbox);
+
+                checkbox.onchange = function(){
+                    item_text.classList.toggle("strike");
+                }
+
+            }
+        }
+
+        render_todos();
+    </script>
+</body>
+</html>
