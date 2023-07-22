@@ -1,0 +1,9 @@
+Polymorphism that is resolved during compile time is known as static polymorphism.
+Polymorphism that is resolved during run time is known as dynamic polymorphism.
+
+Method overloading is used in static polymorphism.
+Method overriding is used in dynamic polymorphism.
+
+In Summary:
+Static Polymorphism = Compile Time Polymorphism > Method Overloading
+Dynamic Polymorphism = Run Time Polymorphism > Method Overriding
