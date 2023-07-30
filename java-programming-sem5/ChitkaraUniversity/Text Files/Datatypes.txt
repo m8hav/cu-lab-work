@@ -1,0 +1,3 @@
+Using primitive datatypes like int, float, etc. instead of their wrapper classes Integer, Float, etc makes the program not so Object-Oriented.
+
+To make sure you're making a completely Object-Oriented program, always use the wrapper classes of the primitive datatypes instead of them directly.
