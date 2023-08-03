@@ -1,0 +1,27 @@
+2 categories of nested classes:
+    1. Static
+    2. Non-Static/Inner
+Nested classes are not the same as Inner Classes.
+Non-Static category of Nested Classes is what is also referred to as Inner Classes
+
+Non-Static/Inner classes can be used to implement helper classes
+Non-Static/Inner classes have 2 additional types:
+    2.1 Local Classes
+        - inner classes declared within the body of a method
+        - some call it Local Method Classes
+        - can declare it within any block, not just a method block, even if block or for loop block
+        - cannot define or declare any static members in this
+        - cannot declare an interface inside a block; interfaces are inherently static because JVM runs them first
+        - cannot declare static initializers or member interfaces in local class
+        - can have static members PROVIDED they are constant, like:
+              E.g. public static final String farewell = "Bye bye";
+    2.2 Anonymous Classes
+        - inner classes declared within the body of a method without naming the class
+        - enable to make your code more concise
+        - enable you to declare and instantiate a class at the same time
+        - they are like local classes except they do not have a name
+        - object is instantiated instantly from the new anonymous class that's declared in the expression
+        - requires to extend a class or implement an interface
+        - only one class/interface can be extended/implemented. No other combination works.
+            i.e. cannot extend two classes, or implement two interfaces, or a class and interface together, or any other combination.
+        - new fields/methods declared in anonymous class that aren't declared in its parent class/interface cannot be accessed outside the anonymous class. This is because the reference of the anonymous class object is still of the parent class/interface which doesn't have that method and so throws an error if tried to use outside.

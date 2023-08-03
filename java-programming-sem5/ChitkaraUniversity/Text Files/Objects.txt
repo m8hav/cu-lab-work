@@ -1,0 +1,12 @@
+4 ways to create an object
+
+    - new keyword
+    - (Class)Class.forName(String packageName.className).newInstance()
+        - if not arguments required
+        - or
+         (Class)Class.forName(String packageName.className).getConstructor(String.class).newInstance(<arguments>);
+         to supply arguments
+    - Cloning an object
+          - requires Cloneable Interface and clone() method
+          - creates deep copy
+    - De-serialization

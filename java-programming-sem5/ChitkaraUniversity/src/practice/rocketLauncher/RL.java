@@ -1,7 +1,9 @@
 package practice.rocketLauncher;
 
+import java.util.*;
+
 public class RL {
-//    CREATE CLASSES AND CHECK THE 5 FOLLOWING THINGS EACH SECOND/STEP
+//    CHECKING THE 5 FOLLOWING THINGS EACH SECOND/STEP
 
 //    5 - FUEL CHECK
 //    4 - OXYGEN CHECK
@@ -10,14 +12,33 @@ public class RL {
 //    1 - ENGINE CHECK
 //    0 - IGNITION ON
 
-    public void launchRocket() {
+    FuelChecker FuelCheckerObj = new FuelChecker();
+    OxygenChecker OxygenCheckerObj = new OxygenChecker();
+    NetlinkChecker NetlinkCheckerObj = new NetlinkChecker();
+    PowerChecker PowerCheckerObj = new PowerChecker();
+    EngineChecker EngineCheckerObj = new EngineChecker();
 
+    Checker[] checkingList = new Checker[]{FuelCheckerObj, OxygenCheckerObj, NetlinkCheckerObj, PowerCheckerObj, EngineCheckerObj};
 
-
-        for (int i = 5; i >= 0; i++) {
-
+    public void checkStatus() {
+        System.out.println("\n--CHECKING ALL SYSTEMS--\n");
+        for (Checker checker : checkingList) {
+            checker.setWorking();
         }
+    }
 
-        System.out.println("Rocket Launched");
+
+    public void launchRocket() {
+        System.out.println("\n--LAUNCHING ROCKET--");
+        System.out.println("Starting Countdown:");
+        for (int i = 0; i < 5; i++) {
+            if (! checkingList[i].checkWorking()) {
+                System.out.printf("Launch Failed due to %s failure!", checkingList[i].checkType);
+                return;
+            };
+            System.out.println(5-i);
+        }
+        System.out.println("Ignition ON\nRocket Launched!");
+
     }
 }
