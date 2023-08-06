@@ -1,0 +1,21 @@
+PRIMITIVE DATATYPES EXIST IN BOTH C++ AND JAVA
+BUT WRAPPER CLASSES OF DATATYPES IN JAVA MAKE IT PROPERLY OBJECT ORIENTED
+SINCE EVEN DATATYPES ARE CLASSES AND ITS INSTANCES ARE OBJECTS NOW
+
+FUNCTIONALITY IS STILL SAME AS PRIMITIVE DATATYPES,
+BUT SINCE JAVA IS SUPPOSED TO BE OBJECT-ORIENTED, MAKING WRAPPER CLASSES MAKES PROGRAMS PROPERLY OBJECT-ORIENTED
+
+Factory Methods exist for all primitive datatypes
+
+in Java 9, wrapper classes' constructors were deprecated
+instead, static factory methods WrapperClass.valueOf() were recommended (they existed since beginning)
+
+Primitive types and Wrapper Objects can be converted to each other
+using WrapperClass.valueOf(primitive datatype variable) to make Wrapper Object
+and using WrapperObject.intValue() to make Primitive type
+replace intValue() with charValue(), floatValue(), etc as per the Wrapper Class
+
+Boxing:     Converting an object of a primitive type (int) to its corresponding wrapper (Integer)
+Unboxing:   Converting an object of a wrapper type (Integer) to its corresponding primitive (int)
+
+Autoboxing: Java automatically does Boxing and Unboxing when a primitive type is passed to wrapper or wrapper type is passed to primitive
