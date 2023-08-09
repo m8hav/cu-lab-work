@@ -15,15 +15,14 @@ public enum Card {
 
 //    No public constructor allowed in enum type
 //    Enum constructor private by default
-    Card(int annualFee, double cardLimit, double annualSalary) {
+    private Card(int annualFee, double cardLimit, double annualSalary) {
         this.annualFee = annualFee;
         this.cardLimit = cardLimit;
         this.annualSalary = annualSalary;
     }
 
-//    If enums are final by default and cannot be inherited (property of final)
-//    then why did Kaushal Sir make its methods protected and constructor private??
-//    it's completely redundant
+//    Enums are final by default and cannot be inherited (property of final)
+//    it's methods are package-private by default
 
 //    protected int getAnnualFee() {
     int getAnnualFee() {

@@ -7,7 +7,7 @@ import java.util.Scanner;
 /*
  * Grandparent bought a car 					- HONDA / REGISTRATION
  * Father got this car from his father 			- RE-REGISTRATION
- * Child got this same car from his father 		- MODIFIED
+ * Salary got this same car from his father 		- MODIFIED
  * 
  */
 

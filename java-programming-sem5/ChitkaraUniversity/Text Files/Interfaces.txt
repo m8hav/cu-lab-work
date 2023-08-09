@@ -1,5 +1,51 @@
+Interfaces is basically a contract, with some defining methods.
+
+The moment you implement an interface, you have signed the contract.
+And if you don't follow the contract, i.e., don't override its methods - it will keep reminding you.
+
+instanceof operator used to check if object is instance of the given class/interface.
+Example: objName instanceof ClassName/InterfaceName
+
 Types of Interfaces:
     Marker Interfaces
     Comparable Interface    - VERY IMPORTANT
     Comparator Interface    - VERY IMPORTANT
     (more later)
+
+Marker Interface
+    - Super Type Of Contract
+    - Empty Interface - doesn't have any methods or constants inside it, so doesn't define any behavior
+    - provides run-time information about objects, so the compiler and JVM have additional information about the object.
+    - also called "tagging interface".
+    - 3 steps of using Marker Interfaces:
+        1. Create the contract
+        2. Sign the contract.
+        3. Follow the contract.
+    - 3 Marker Interfaces already provided in Java:
+        1. Cloneable
+            - java.lang.Cloneable
+            - allows all objects of this class to use clone() method (inherited from java.lang.Object)
+            - we are bound/required to implement it to use clone() method, otherwise clone() method doesn't work.
+            - clone object and original object point to different locations in memory
+            - came in jdk 1.0
+        2. Serializable
+            - java.io.Serializable
+            - indicates the objects of this class can be serialized
+            - Serialization is the conversion of a Java object into a static stream (sequence) of bytes, which we can them save to a database or transfer over a network.
+            - the serialization process is instance-independent. For example, we can serialize objects on one platform and deserialize them on another.
+            - all subclasses are serializable as well.
+            - if Serializable class has reference to other class, then these classes need to be Serializable too.
+                - otherwise throws NotSerializableException
+            - by default, String and all the wrapper classes implement the Serializable interface.
+            - transient keyword
+                - field doesn't get serialized i.e. doesn't get sent to byte in object
+            - came in jdk 1.1
+        3. Remote
+            - RMI - Remote Method Invocation
+                - huge API usually learnt in companies, so no need to learn now.
+            - came in jdk 1.1
+
+DAO Class
+    - DAO - Data Access Object
+    - Name for type of class that has only getters and setters, and constructors.
+    - It is only used in other classes and not directly.

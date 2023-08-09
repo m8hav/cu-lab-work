@@ -1,0 +1,41 @@
+Annotations are Java types that are preceded by an "@" symbol.
+Annotations can be applied to the classes, interfaces, methods and fields.
+Spring and Hibernate are great examples of frameworks that rely heavily on annotations.
+An annotation assigns extra metadata to the source it's bound to.
+Annotations offer an alternative to the user of XML descriptors and marker interfaces.
+
+Annotation does not affect the execution of the program. i.e. it has no side effects that using some other things might have.
+
+Why use Annotations?
+    - Instructions to the compiler
+    - Compile-time instructors
+    - Runtime instructions
+
+Common Built-in Annotations in Java:
+    1. Override
+        - While overriding a method in the child class, we should use this annotation to mark that method.
+        - This makes code readable and avoid maintenance issues, such as: while changing the method signature of parent class, you must change the signature in child classes (where this annotation is being used) otherwise compiler would throw compilation error. This is difficult to trace when you haven't used this annotation.
+
+    2. Deprecated
+        - This indicates that the marked element (class, method or field) is deprecated and should no longer be used.
+        - The compiler generates a warning whatever a program uses a method, class, or field that has already been marked with the @Deprecated annotation.
+        - When an element is deprecated, it should also be documented using the Javadoc @deprecated tag.
+        - Make a note of case difference between @Deprecated and @deprecated.
+        - @deprecated is used for documentation purpose
+
+    3. SuppressWarnings
+        - This annotation instructs the compiler to ignore specific warnings.
+
+    There are more but these are the most common ones.
+
+Creating Custom Annotations:
+    - to create custom annotation, replace class/interface keyword with @interface.
+        - Example: public @interface CustomAnnotation {}
+    - Custom Annotations can be created on 5 levels:
+        - Class Level
+        - Field Level
+        - Method Level
+        - Interface Level
+        - Package Level
+    - use java.lang.annotation.Target and java.lang.annotation.ElementType to specify the target element type
+    - use java.lang.annotation.Retention and java.lang.annotation.RetentionPolicy to specify the retention policy i.e. RUNTIME, etc

@@ -7,7 +7,7 @@ public class StaticAndInnerMain {
     public static void runInnerNestedClassPrograms() {
 
         System.out.println("----------------------------------------\n");
-        System.out.println("Non-Static/Inner Class Example");
+        System.out.println("Non-Static/Inner Class Updatable");
         System.out.println("----------------------------------------\n");
 
 //      making inner nested class objects
@@ -36,7 +36,7 @@ public class StaticAndInnerMain {
     public static void runStaticNestedClassPrograms() {
 
         System.out.println("----------------------------------------\n");
-        System.out.println("Static Class Example");
+        System.out.println("Static Class Updatable");
         System.out.println("----------------------------------------\n");
 
 //      making static nested class objects
