@@ -1,4 +1,4 @@
-package annotations.customAnnotations;
+package annotations.custom.classLevel;
 
 //import java.lang.annotation.ElementType;
 //import java.lang.annotation.Retention;

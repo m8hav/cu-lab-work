@@ -1,7 +1,7 @@
-package annotations.customAnnotations;
+package annotations.custom.classLevel;
 
 @SuppressWarnings("unused")
-public class CustomAnnotationsMain {
+public class ClassLevelMain {
     public void runProgram() {
         ToDo obj = new ToDo();
 
@@ -14,7 +14,7 @@ public class CustomAnnotationsMain {
     }
 
     public static void main(String[] args) {
-        CustomAnnotationsMain obj = new CustomAnnotationsMain();
+        ClassLevelMain obj = new ClassLevelMain();
         obj.runProgram();
     }
 }
