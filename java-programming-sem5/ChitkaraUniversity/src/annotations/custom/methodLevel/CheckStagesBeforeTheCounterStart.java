@@ -1,23 +1,26 @@
 package annotations.custom.methodLevel;
 
-@SuppressWarnings("redundant")
 public class CheckStagesBeforeTheCounterStart {
+    private boolean status;
+    public CheckStagesBeforeTheCounterStart(boolean status) {
+        this.status = status;
+    }
     @OnSuperPriority
     public String isOxygenOn() {
-        boolean isOxygenOn = true;
-//        return isOxygenOn;
-        return String.valueOf(isOxygenOn).toUpperCase();
+//        boolean isOxygenOn = true;
+//        return status;
+        return String.valueOf(status).toUpperCase();
     }
     public boolean isNetLinkOn() {
-        boolean isNetLinkOn = true;
-        return isNetLinkOn;
+//        boolean isNetLinkOn = true;
+        return status;
     }
     public boolean isFuelOn() {
-        boolean isFuelOn = true;
-        return isFuelOn;
+//        boolean isFuelOn = true;
+        return status;
     }
     public boolean isPowerOn() {
-        boolean isPowerOn = true;
-        return isPowerOn;
+//        boolean isPowerOn = true;
+        return status;
     }
 }

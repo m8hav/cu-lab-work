@@ -30,7 +30,7 @@ public class SerializableMain {
             System.out.println(empObj.getAddress().toString());
 
 //            Creating stream and writing the object
-            FileOutputStream fosObj = new FileOutputStream("EmployeeData.txt");
+            FileOutputStream fosObj = new FileOutputStream("IOFiles/EmployeeData.txt");
             ObjectOutputStream out = new ObjectOutputStream(fosObj);
 
             out.writeObject(empObj);
@@ -47,8 +47,8 @@ public class SerializableMain {
         try {
 //            Creating stream to read the object
 
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("EmployeeData.txt"));
-//            ObjectInputStream in = new ObjectInputStream(Files.newInputStream(Paths.get("EmployeeData.txt")));
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("IOFiles/EmployeeData.txt"));
+//            ObjectInputStream in = new ObjectInputStream(Files.newInputStream(Paths.get("IOFiles/EmployeeData.txt")));
 
             Employee empObj = (Employee)in.readObject();
 

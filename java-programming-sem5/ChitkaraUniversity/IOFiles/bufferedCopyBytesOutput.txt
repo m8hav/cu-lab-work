@@ -1,0 +1,3 @@
+Buffered copy bytes text sample
+
+another text after 2 line breaks

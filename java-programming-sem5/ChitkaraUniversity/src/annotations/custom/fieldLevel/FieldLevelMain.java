@@ -1,4 +1,4 @@
-package annotations.custom.fieldLevel;
+package annotations.trainersCode.custom.fieldlevel;
 
 import java.lang.reflect.Field;
 
@@ -14,8 +14,15 @@ public class FieldLevelMain {
 
             if (field.isAnnotationPresent(CandidateName.class)) {
                 Object objData = field.get(obj);
+//                ^ getting field's value for provided object (obj)
+//                then putting that value in object of type Object, so it can hold any member type
 
-//                check and typecast to string : in JRE 16
+//                Check the object type is String and then typecast to String
+//                in JRE 16:
+//                if (objData instanceof String stringData) {
+//                    System.out.println(stringData.toUpperCase());
+//                }
+//                earlier versions:
                 if (objData instanceof String) {
                     System.out.println(String.valueOf(objData).toUpperCase());
                 }
