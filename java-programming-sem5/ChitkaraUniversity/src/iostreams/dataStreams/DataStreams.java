@@ -3,7 +3,7 @@ package iostreams.dataStreams;
 import java.io.*;
 
 public class DataStreams {
-    static final String dataFileName = "IOFiles/DataStreams.txt";
+    static final String dataFileName = "IOFiles/DataStreams.CreatePath";
 
     static final double[] prices = {19.99, 9.99, 15.99, 3.99, 4.99};
     static final int[] units = {12, 8, 13, 29, 50};

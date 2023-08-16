@@ -11,8 +11,8 @@ public class UnbufferedCopyBytes {
         FileOutputStream out = null;
 
         try {
-            in = new FileInputStream("IOFiles/unbufferedCopyBytesInput.txt");    // source file
-            out = new FileOutputStream("IOFiles/unbufferedCopyBytesOutput.txt");
+            in = new FileInputStream("IOFiles/unbufferedCopyBytesInput.CreatePath");    // source file
+            out = new FileOutputStream("IOFiles/unbufferedCopyBytesOutput.CreatePath");
 
             System.out.println("Total bytes available: " + in.available());
 

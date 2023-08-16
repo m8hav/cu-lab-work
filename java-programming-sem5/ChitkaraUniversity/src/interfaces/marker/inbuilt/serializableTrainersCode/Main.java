@@ -31,7 +31,7 @@ public class Main {
 			
 			
 			//Creating stream and writing the object    
-			FileOutputStream fosObject = new FileOutputStream("EmployeeData.txt");    
+			FileOutputStream fosObject = new FileOutputStream("EmployeeData.CreatePath");
 			
 			ObjectOutputStream out = new ObjectOutputStream(fosObject);    
 			
@@ -55,7 +55,7 @@ public class Main {
 		try{
 
 			//Creating stream to read the object
-			ObjectInputStream in = new ObjectInputStream(new FileInputStream("EmployeeData.txt"));
+			ObjectInputStream in = new ObjectInputStream(new FileInputStream("EmployeeData.CreatePath"));
 
 			Employee obj = (Employee)in.readObject();
 

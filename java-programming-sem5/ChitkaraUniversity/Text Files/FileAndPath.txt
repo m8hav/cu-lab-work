@@ -1,0 +1,18 @@
+java.io.File
+- jdk 1.0
+- File.mkdirs() method is more powerful than File.mkdir() method. It created a hierarchy of new folders or directories, if not created
+
+java.nio.file.Path
+- jdk 1.7
+- can do everything java.io.File can
+- Path is not system dependent
+- Interface:    https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html
+- Class:        https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html
+Creating Path:
+    Path path = Paths.get("E:/java/nio/user/home/documents/personal", "my_resume.doc");
+    Path path = Paths.get("E:/java/nio/user/home", "documents/personal", "my_resume.doc");
+    Path path = Paths.get("E:/java" + "nio/user/home", "documents/personal", "my_resume.doc");
+
+
+Absolute Path: always contains the root element and complete directory list required to locate the file.
+Relative Path: needs to be combined with another path in order to access a file.

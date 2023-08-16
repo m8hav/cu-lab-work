@@ -11,8 +11,8 @@ public class UnbufferedCopyCharacters {
         FileWriter out = null;
 
         try {
-            in = new FileReader("IOFILES/unbufferedCopyCharactersInput.txt");
-            out = new FileWriter("IOFILES/unbufferedCopyCharactersOutput.txt");
+            in = new FileReader("IOFILES/unbufferedCopyCharactersInput.CreatePath");
+            out = new FileWriter("IOFILES/unbufferedCopyCharactersOutput.CreatePath");
 
             int c;
 //            System.out.println(c = 19);

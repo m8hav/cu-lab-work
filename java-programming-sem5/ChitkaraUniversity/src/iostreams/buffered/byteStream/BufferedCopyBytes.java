@@ -8,8 +8,8 @@ public class BufferedCopyBytes {
         BufferedOutputStream bWriter = null;
 
         try {
-            bReader = new BufferedInputStream(new FileInputStream("IOFiles/bufferedCopyBytesInput.txt"));
-            bWriter = new BufferedOutputStream(new FileOutputStream("IOFiles/bufferedCopyBytesOutput.txt"));
+            bReader = new BufferedInputStream(new FileInputStream("IOFiles/bufferedCopyBytesInput.CreatePath"));
+            bWriter = new BufferedOutputStream(new FileOutputStream("IOFiles/bufferedCopyBytesOutput.CreatePath"));
 
             int c;
             while ((c = bReader.read()) != -1) {

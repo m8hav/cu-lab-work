@@ -7,7 +7,7 @@ public class ObjectStreams {
         ObjectInputStream in = null;
         ObjectOutputStream out = null;
 
-        String filePath = "IOFiles/ObjectStreams.txt";
+        String filePath = "IOFiles/ObjectStreams.CreatePath";
 
 //        Object being written needs to be Serializable
         Employee empObj = new Employee("BMMC-101", "Bart");

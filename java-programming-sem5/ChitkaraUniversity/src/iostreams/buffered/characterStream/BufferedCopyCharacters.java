@@ -8,8 +8,8 @@ public class BufferedCopyCharacters {
         BufferedWriter bWriter = null;
 
         try {
-            bReader = new BufferedReader(new FileReader("IOFiles/bufferedCopyCharactersInput.txt"));
-            bWriter = new BufferedWriter(new FileWriter("IOFiles/bufferedCopyCharactersOutput.txt"));
+            bReader = new BufferedReader(new FileReader("IOFiles/bufferedCopyCharactersInput.CreatePath"));
+            bWriter = new BufferedWriter(new FileWriter("IOFiles/bufferedCopyCharactersOutput.CreatePath"));
 
             String line;
             while ((line = bReader.readLine()) != null) {
