@@ -19,40 +19,43 @@ public class DataStreams {
         DataOutputStream out = null;
         DataInputStream in = null;
 
+//        WRITING TO FILE FIRST
         try {
-//            WRITING TO FILE FIRST
             out = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(dataFileName)));
             for (int i = 0; i < prices.length; i++) {
                 out.writeDouble(prices[i]);
                 out.writeInt(units[i]);
                 out.writeUTF(descs[i]);
             }
-            System.out.println("Data written successfully.");
+            out.close();
+            System.out.println("\n=====Data written successfully=====\n");
+        } catch (IOException e) {
+            System.out.println("Error occurred while writing: " + e);
+//            throw new RuntimeException(e);
+        }
 
-//            READING DATA STREAM FROM FILE NOW
+//        READING DATA STREAM FROM FILE NOW
+        try {
             in = new DataInputStream(new BufferedInputStream(new FileInputStream(dataFileName)));
             double price;
             int unit;
             String desc;
             double total = 0.0;
-//            Object c;
-//            while ((Integer) (c = in.read()) != -1) {
-            while (true) {
+            while (in.available() > 0) {
                 price = in.readDouble();
                 unit = in.readInt();
                 desc = in.readUTF();
-                System.out.format("You ordered %d" + " units of %s at $%.2f%n",
+                System.out.format("You ordered %d units of %s at $%.2f%n",
                         unit, desc, price);
                 total += unit * price;
+                System.out.println("Estimated bytes available: " + in.available());
             }
-//            System.out.println("Data read successfully.");
-        } catch (IOException e) {
-            System.out.println("Error occurred: " + e);
-//            throw new RuntimeException(e);
-        } finally {
-//            assert out != null;
-            out.close();
+            System.out.printf("Your total is $%.2f\n", total);
             in.close();
+            System.out.println("\n=====Data read successfully=====\n");
+        } catch (IOException e) {
+            System.out.println("Error occurred while reading: " + e);
+            throw new RuntimeException(e);
         }
     }
 }
