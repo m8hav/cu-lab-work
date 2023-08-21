@@ -41,11 +41,11 @@ public class Anonymous {
         };
         HelloWorld hindiGreeting = new HelloWorld() {
             public void greetings(String hGreet) {
-                System.out.println("French: " + hGreet);
+                System.out.println("Hindi: " + hGreet);
             }
         };
 
-//        Anonymous Class by extending class but with reference of HelloWorld interface
+//        Anonymous Class by extending class but with reference of EnglishGreeting interface
         EnglishGreeting anonymousClassObj1 = new EnglishGreeting() {
             public int a = 200;
             public int z = 200;
@@ -62,7 +62,7 @@ public class Anonymous {
                 cannotAccessThisOutside();
             }
         };
-//        Anonymous Class by extending class but with reference of EnglishGreeting Class
+//        Anonymous Class by extending class but with reference of HelloWorld Class
         HelloWorld anonymousClassObj2 = new EnglishGreeting() {
             public int a = 200;
             public int z = 200;
@@ -90,7 +90,7 @@ public class Anonymous {
         anonymousClassObj2.greetings("hello");
 
         anonymousClassObj1.printHello("hello");
-//        anonymousClassObj2.hello("hello");
+//        anonymousClassObj2.printHello("hello");
 //        ^ doesn't work if using reference of HelloWorld interface because method isn't declared in that interface
 
         System.out.println(anonymousClassObj1.a);

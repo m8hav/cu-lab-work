@@ -1,10 +1,11 @@
-All of these only work for one-dimensional arrays
+Frequently Used Arrays Class Methods:
+    - All of these only work for one-dimensional arrays
 
 SORT
 Arrays.sort(array);
 Arrays.sort(array, fromIndex, toIndex);
 
-FILL - only works for one-dimensional arrays
+FILL
 Arrays.fill(array, value);
 Arrays.fill(array, fromIndex, toIndex, value);
 
@@ -13,7 +14,7 @@ Arrays.binarySearch(array, key);
 Arrays.binarySearch(array, fromIndex, toIndex, key);
 
 EQUALS
-Arrays.equals(array1, array2);
+Arrays.equals(array_1, array_2);
 Arrays.equals(array_1, fromIndex_1, toIndex_1, array_2, fromIndex_2, toIndex_2);
 
 RANGECHECK

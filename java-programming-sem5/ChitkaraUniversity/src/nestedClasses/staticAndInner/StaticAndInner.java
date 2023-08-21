@@ -170,9 +170,9 @@ public class StaticAndInner {
         runStaticNestedClassPrograms();
 
 //        SINGLE LINE INSTANTIATION
-        StaticAndInner.StaticNestedClass singleLineInstantiatedStaticObj = new StaticNestedClass();
+        StaticNestedClass singleLineInstantiatedStaticObj = new StaticNestedClass();
 //        or
-        StaticAndInner.InnerNestedClass singleLineInstantiatedInnerObj = new StaticAndInner().new InnerNestedClass();
+        InnerNestedClass singleLineInstantiatedInnerObj = new StaticAndInner().new InnerNestedClass();
     }
 
 }

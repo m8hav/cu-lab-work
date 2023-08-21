@@ -4,22 +4,24 @@ public class HelloWorld {
 
 
     //	initialization block. Called in order of appearance when object is instantiated
+    //	It is run even before the constructor
     {
-        System.out.println("in object i block 1");
+        System.out.println("in object initialization block 1");
     }
 
-    //	Static initialization block. Called when class is loaded, in order of appearance. It's run even before the main method
+    //	Static initialization block. Called when class is loaded, in order of appearance
+    //	It is run even before the main method
     static {
         System.out.println("in static class initialization block 1");
     }
 
     public HelloWorld(int a) {
-        // TODO Auto-generated constructor stub
         int z = a;
         System.out.println("in the constructor with value " + a);
     }
 
     //	initialization block. Called in order of appearance when object is instantiated
+    //	It is run even before the constructor
     {
         System.out.println("in object initialization block 3");
     }
@@ -33,12 +35,12 @@ public class HelloWorld {
     }
 
     //	initialization block. Called in order of appearance when object is instantiated
+    //	It is run even before the constructor
     {
         System.out.println("in object initialization block 2");
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         System.out.println("in static void main method");
 
 //		String message = "bruh";
@@ -64,7 +66,8 @@ public class HelloWorld {
         obj.newMethod();
     }
 
-    //	Static initialization block. Called when class is loaded, in order of appearance. It's run even before the main method
+    //	Static initialization block. Called when class is loaded, in order of appearance
+    //	It is run even before the main method
     static {
         System.out.println("in static class initialization block 2");
     }

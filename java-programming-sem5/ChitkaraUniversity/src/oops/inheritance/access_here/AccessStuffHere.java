@@ -9,9 +9,11 @@ public class AccessStuffHere extends AccessFromThis {
     protected int c = 10;
     public static void main(String[] args) {
         AccessStuffHere obj = new AccessStuffHere();
+        AccessFromThis obj2 = new AccessFromThis();
+        System.out.println(obj2.a);
         System.out.println(obj.c);
         System.out.println(obj.b);
-        // cannot access methods or fields from another class if they aren't public or protected with inheritance
+        // cannot access methods or fields from another package if they aren't public or (protected with inheritance)
         System.out.println(obj.a);
     }
 }

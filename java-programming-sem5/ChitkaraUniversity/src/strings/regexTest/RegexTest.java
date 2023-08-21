@@ -16,20 +16,19 @@ public class RegexTest {
         String f = "123!@#asd";
 
         System.out.printf("Regex1 - %s:\n", regex1);
+        testRegex(regex1, a, b, c, d, e, f);
+        System.out.println();
+
+        System.out.printf("Regex2 - %s:\n", regex2);
+        testRegex(regex2, a, b, c, d, e, f);
+    }
+
+    private void testRegex(String regex1, String a, String b, String c, String d, String e, String f) {
         System.out.println(a.matches(regex1));
         System.out.println(b.matches(regex1));
         System.out.println(c.matches(regex1));
         System.out.println(d.matches(regex1));
         System.out.println(e.matches(regex1));
         System.out.println(f.matches(regex1));
-        System.out.println();
-
-        System.out.printf("Regex2 - %s:\n", regex2);
-        System.out.println(a.matches(regex2));
-        System.out.println(b.matches(regex2));
-        System.out.println(c.matches(regex2));
-        System.out.println(d.matches(regex2));
-        System.out.println(e.matches(regex2));
-        System.out.println(f.matches(regex2));
     }
 }

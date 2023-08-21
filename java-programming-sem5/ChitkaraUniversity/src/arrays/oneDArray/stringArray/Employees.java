@@ -32,6 +32,10 @@ public class Employees {
         }
         System.out.println();
 
+        System.out.println(employees);
+        System.out.println(Arrays.toString(employees));
+        System.out.println();
+
         for (String employee : employees)
             System.out.println(employee);
 

@@ -13,6 +13,7 @@ public class SBTest {
 
 //        STRING BUILDER IS FASTER THAN STRING BUFFER BECAUSE IT IS NOT SYNCHRONISED AND NOT THREAD-SAFE
 
+//        BOTH HAVE AN INITIAL CAPACITY OF 16 CHARACTERS ON INITIALIZATION
 
         StringBuilder first;
         first = new StringBuilder();
@@ -29,6 +30,7 @@ public class SBTest {
 
 //        IF YOU CREATE StringBuilder WITH NEW KEYWORD I.E. WITH STRING IN CONSTRUCTOR,
 //        THEN LENGTH GETS ADDED TO INITIAL CAPACITY AND OBJECT STARTS WITH THAT CAPACITY
+        System.out.println("=====CREATING ANOTHER STRING=====:");
         StringBuilder second = new StringBuilder("Solar System");
         System.out.println("Value: " + second);
         System.out.println("Length: " + second.length());

@@ -2,13 +2,13 @@ Annotations are Java types that are preceded by an "@" symbol.
 Annotations can be applied to the classes, interfaces, methods and fields.
 Spring and Hibernate are great examples of frameworks that rely heavily on annotations.
 An annotation assigns extra metadata to the source it's bound to.
-Annotations offer an alternative to the user of XML descriptors and marker interfaces.
+Annotations offer an alternative to the use of XML descriptors and marker interfaces.
 
 Annotation does not affect the execution of the program. i.e. it has no side effects that using some other things might have.
 
 Why use Annotations?
     - Instructions to the compiler
-    - Compile-time instructors
+    - Compile-time instructions
     - Runtime instructions
 
 Common Built-in Annotations in Java:

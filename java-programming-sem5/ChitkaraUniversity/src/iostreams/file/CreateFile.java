@@ -15,7 +15,8 @@ public class CreateFile {
         String fileName = input.nextLine();
 
         File file = new File(path + "/" + fileName);
-//        emp_data.CreatePath
+//        emp_data.txt
+        System.out.println("File instance created: " + file);
 
         boolean result;
 

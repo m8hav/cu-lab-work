@@ -4,7 +4,7 @@ package interfaces.marker.custom.CRUDExample;
 // ^ importing Updatable marker interface from another package i.e. same name but from different package to test if CRUD still works
 // ^ it doesn't
 public class Employee implements Creatable, Readable, Updatable, Deletable {
-    static private int counter;
+    private static int counter;
     private final int empSerialNo;
     private String id;
     private String name;

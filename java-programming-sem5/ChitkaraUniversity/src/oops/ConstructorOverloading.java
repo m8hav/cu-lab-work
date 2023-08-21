@@ -16,14 +16,17 @@ public class ConstructorOverloading {
 
     public static void main(String[] args) {
         System.out.println("in public static void main method");
+        System.out.println();
 
-        for (int i = 1; i <= 5; i++) System.out.println(i);
+        for (int i = 1; i <= 5; i++) System.out.print(i + " ");
+        System.out.println("\n");
 
         ConstructorOverloading objOne = new ConstructorOverloading(5, 10);
         System.out.println(objOne.one);
         System.out.println(objOne.two);
         System.out.println(objOne.a);
         System.out.println(objOne.b);
+        System.out.println();
 
         ConstructorOverloading objTwo = new ConstructorOverloading("hello", "world", 5, 10);
         System.out.println(objTwo.one);
@@ -35,5 +38,6 @@ public class ConstructorOverloading {
 }
 
 final class Another {}
+
 // Cannot inherit class that is declared final
 // abstract class AnotherOne extends Another {}

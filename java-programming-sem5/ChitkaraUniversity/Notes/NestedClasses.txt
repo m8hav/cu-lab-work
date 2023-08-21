@@ -1,4 +1,4 @@
-2 categories of nested classes:
+2 categories of Nested Classes:
     1. Static
     2. Non-Static/Inner
 Nested classes are not the same as Inner Classes.
@@ -14,7 +14,7 @@ Non-Static/Inner classes have 2 additional types:
         - cannot declare an interface inside a block; interfaces are inherently static because JVM runs them first
         - cannot declare static initializers or member interfaces in local class
         - can have static members PROVIDED they are constant, like:
-              E.g. public static final String farewell = "Bye bye";
+            E.g. public static final String farewell = "Bye bye";
     2.2 Anonymous Classes
         - inner classes declared within the body of a method without naming the class
         - enable to make your code more concise

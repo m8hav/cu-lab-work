@@ -6,6 +6,7 @@ import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
 
 public class SerializableMain {
+    String filePath = "IOFiles/SerializedEmployeeData.txt";
     public void runProgram() {
 //        SERIALIZATION
         try {
@@ -22,15 +23,10 @@ public class SerializableMain {
             empObj.setAadharCard("1234 5678 9012");
 
 //            Printing data of employee object
-            System.out.println(empObj.getSerialNo());
-            System.out.println(empObj.getId());
-            System.out.println(empObj.getName());
-            System.out.println(empObj.getPanCard());
-            System.out.println(empObj.getAadharCard());
-            System.out.println(empObj.getAddress().toString());
+            System.out.println(empObj.getInfo());
 
 //            Creating stream and writing the object
-            FileOutputStream fosObj = new FileOutputStream("IOFiles/EmployeeData.CreatePath");
+            FileOutputStream fosObj = new FileOutputStream(filePath);
             ObjectOutputStream out = new ObjectOutputStream(fosObj);
 
             out.writeObject(empObj);
@@ -47,19 +43,15 @@ public class SerializableMain {
         try {
 //            Creating stream to read the object
 
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("IOFiles/EmployeeData.CreatePath"));
-//            ObjectInputStream in = new ObjectInputStream(Files.newInputStream(Paths.get("IOFiles/EmployeeData.CreatePath")));
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath));
+//            ObjectInputStream in = new ObjectInputStream(Files.newInputStream(Paths.get(outputFilePath)));
 
             Employee empObj = (Employee)in.readObject();
 
 //            Printing data of new serialized object
-            System.out.println(empObj.getSerialNo());
-            System.out.println(empObj.getId());
-            System.out.println(empObj.getName());
-            System.out.println(empObj.getPanCard());
-//            ^ prints null because panCard field didn't get recognized
-            System.out.println(empObj.getAadharCard());
-            System.out.println(empObj.getAddress().toString());
+            System.out.println(empObj.getInfo());
+//            ^ panCard prints null because panCard field didn't get serialized
+
 
             in.close();
 

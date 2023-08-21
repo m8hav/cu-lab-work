@@ -7,7 +7,7 @@ public class ParkingMain {
 
     Sample sample;
     private enum Sample {
-        SAMPLE1, SAMPLE2
+        SAMPLE1, SAMPLE2;
     }
     public ParkingMain(ParkingType parkingType) {
         this.parkingType = parkingType;

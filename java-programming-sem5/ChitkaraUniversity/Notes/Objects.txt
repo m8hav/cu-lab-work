@@ -1,0 +1,15 @@
+4 ways to create an object
+
+    - new keyword
+    - Class.forName(String packageName.className)
+        - (className)Class.forName(String packageName.className).newInstance();
+        if not arguments required
+        or
+        - (className)Class.forName(String packageName.className).getConstructor(argumentDatatype.class).newInstance(<arguments>);
+        if arguments required
+    - Cloning an object
+          - requires Cloneable Interface and clone() method
+          - Oracle docs say the copy is shallow because the method creates:
+              - deep copy for primitive types and String
+              - shallow copy for non-primitive types and non-String, like objects of custom-made classes
+    - De-serialization

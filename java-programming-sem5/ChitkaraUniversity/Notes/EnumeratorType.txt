@@ -1,0 +1,23 @@
+- An enum is a special type of data type which is basically a collection of fixed constants.
+- The main objective of enum is to define our own data types.
+- Enum can be declared inside or outside a class.
+- Enums are used when we know all possible values at compile time.
+- As per Java Naming Conventions, all constant names/values should be in UPPER CASE.
+- Enum can't be declared inside a method.
+    - because enum instances are static class fields and are initialised as part of the class loading when you first access the class.
+    - so it is basically instantiated by JVM before calling any methods.
+- Inside an enum, the constants must be placed in the very first line then variables, constructor and methods.
+
+More notes:
+- enum type is a special data type that enables for a variable to be a value from a set of predefined constants.
+- The variable must be equal to one of the values that have been predefined for it.
+- Common examples include compass directions (values of NORTH, SOUTH, EAST AND WEST) and the days of the week.
+- All enums implicitly extend java.lang.Enum and therefore an enum cannot extend anything else.
+- You can use Enum for all possible values at compile time.
+- In Java since JDK 1.5.
+- Only one public enum can be declared in a class file, just like a public class.
+
+Even more notes:
+- An enum can, just like a class, have attributes and methods.
+- The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden).
+- An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
