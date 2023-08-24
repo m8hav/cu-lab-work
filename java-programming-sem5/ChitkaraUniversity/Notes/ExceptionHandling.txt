@@ -1,0 +1,150 @@
+NOTES FROM PPT:
+Errors can occur in a program.
+Exception handling can handle errors and gracefully re-route the program to give the user still a positive experience.
+
+We usually write code in an idealized environment:
+    - the filesystem always contains our files
+    - the network is healthy
+    - and the JVM always has enough memory
+Sometimes we call this the "happy path".
+
+In production, though:
+    - filesystems can corrupt
+    - networks break down
+    - and JVMs run out of memory
+        - JVM out of memory issue is what usually occurs in ATMs.
+The well-being of our code depends on how it deals with "unhappy paths"
+
+"Errors are killing our lives" - Frustrated Software Engineers Association
+
+Exception handling is one of the most important features of java programming that helps in handling exceptions.
+
+Exception:
+    - an unwanted event that interrupts the normal flow of the program.
+    - when an exception occurs program execution gets terminated, and we get a system generated error message.
+
+Exceptions can be handled in Java easily.
+By handling exceptions we can provide a meaningful message to the user about the issue rather than a system generated message which may not be understandable to a user.
+
+Why an exception occurs?
+    - There can be several reasons that can cause a program to throw exception.
+    - For example:
+        - Bad input data by a user
+        - Opening a non-existing file
+        - Network connection problem
+
+Advantage of Exception Handling:
+    - flow of the program doesn't break when an exception occurs.
+    - user gets a meaningful message about the issue.
+
+Difference between Error and Exception:
+    Error:
+        - Errors indicate that something severe enough has gone wrong
+        - the application should crash rather than try to handle the error.
+    Exception:
+        - Exceptions are events that occurs in the code.
+        - A programmer can handle such conditions and take necessary steps to continue the flow of program.
+
+Exceptions Examples:
+    NullPointerException
+        - When you try to use a reference that points to null.
+    ArithmeticException
+    ArrayOutOfBounds
+
+
+------------------------------------------------------------
+  refer to "ExceptionHandlingHierarchy.png" in Notes folder
+------------------------------------------------------------
+
+TYPES OF EXCEPTIONS:
+    (mainly we have only 2 types - Checked Exceptions and Unchecked Exceptions)
+
+    0. Errors
+        - Errors are those exceptions indicated by Error and its subclasses
+        - usually for things you cannot recover from.
+
+    1. Checked Exceptions/Compile-time Exceptions
+        - exceptional conditions that a well-written application should anticipate and recover from.
+        - subject to the Catch or Specify Requirements
+        - Exception class and all of its subclasses, other than RuntimeException and its subclasses - because they are unchecked exceptions, are checked exceptions
+        - occur at compile time
+        - checked at compile time by Java compiler
+        - REQUIRES to be dealt with, using try catch blocks or throws declaration, for the program to compile
+        Example:
+            public static void test() {
+                throw new Exception();
+            }
+            ^ requires us to handle it for the program to compile, so the code becomes:
+            public static void test() {
+                try {
+                    throw new Exception();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            ^ using try catch block, or
+            public static void test() throws Exception {
+                throw new Exception();
+            }
+            ^ using throws declaration
+
+    2. Unchecked Exceptions/Runtime Exceptions
+        - exceptional conditions that are external to the application, that the application usually cannot anticipate or recover from.
+        - not subject to the Catch or Specify Requirements
+        - RuntimeException class and all of its subclasses are unchecked exceptions
+        - occur at run time
+        - not checked by compile time by Java compiler and hence are called Unchecked Exceptions.
+        - doesn't REQUIRE to be dealt with for the program to compile
+            - but the exception is going to occur at runtime if it's not dealt with using try catch blocks or throws declaration.
+        Example:
+            public static void test() {
+                throw new RuntimeException();
+            }
+            ^ doesn't require us to handle it for the program to compile
+
+Difference between Checked and Unchecked Exceptions:
+    - Checked are checked at compile time while unchecked are checked at runtime
+    - other points given above in full explanations
+
+Error class and Exception class are both subclasses of the Throwable class
+    - both used to indicate that an abnormal situation has happened.
+    - only instances of Throwable and its subclasses can be thrown by the JVM or caught by the catch clause
+
+Runtime Exceptions:
+    - internal to the application
+
+Since JDK 1.7:
+    - you can catch more than one type of exception with one exception handler
+    - Example:
+        try {
+            code
+        } catch (IOException | SQLException ex) {
+            throw ex
+        }
+
+finally block is mainly used to put code related to the try catch block in a related block.
+    - it gives another way to do things without messing with the main flow of your program.
+
+in Java, we have 5 keywords for exceptions handling:
+    1. try
+    2. catch
+    3. finally
+    4. throw
+        - used to explicitly throw an exception
+        - can throw either checked or unchecked
+        - mainly used to throw custom exceptions
+    5. throws
+        - used to declare an exception
+        - gives in information to the programmer that an exception may occur
+            - so it is better for the programmer to provide the exception handling code
+            - so that the normal flow can be maintained
+
+Custom Exceptions:
+    - extend Exception class
+    - two ways to set exception message:
+        1. send message to super() in constructor
+            - return message using exceptionObj.getMessage()
+                ^ returns the detailMessage string from Throwable class i.e. message sent to super() in Throwable
+        2. create custom private message in custom exception class
+            - set message using constructor
+            - override toString method to return that message when exception obj is printed

@@ -7,6 +7,12 @@ import oops.inheritance.access_this.AccessFromThis;
 
 public class AccessStuffHere extends AccessFromThis {
     protected int c = 10;
+    public void check() {
+//        System.out.println(super);
+//        ^ cannot print super since super is a reference to the parent class objects, but there is no parent class object and that class is just inherited here in this child class, and the only object is of this child class now, so super has no relevance and thus cannot be printed.
+        System.out.println(this);
+//      ^ this keyword does the job of referencing to the current class object.
+    }
     public static void main(String[] args) {
         AccessStuffHere obj = new AccessStuffHere();
         AccessFromThis obj2 = new AccessFromThis();
@@ -15,6 +21,8 @@ public class AccessStuffHere extends AccessFromThis {
         System.out.println(obj.b);
         // cannot access methods or fields from another package if they aren't public or (protected with inheritance)
         System.out.println(obj.a);
+        System.out.println(obj);
+        obj.check();
     }
 }
 

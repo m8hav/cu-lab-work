@@ -50,6 +50,9 @@ public class Practice {
         obj2.a = 2;
         System.out.println(myflag);
 
+        System.out.println(Double.toString(12));
+        StringBuilder bruh = new StringBuilder("bruh");
+
 //        int zi;
 //        boolean zb;
 //        System.out.println(zi);
