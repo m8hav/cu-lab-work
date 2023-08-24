@@ -1,0 +1,37 @@
+Sealed classes/interfaces are those that can be inherited/implemented only by a set of permitted classes/interfaces.
+
+Introduced in Java 15 - JDK 15
+
+Important keywords in sealed classes:
+    sealed:
+        - classes/interfaces with sealed modifier tells that they can be extended/implemented only by those classes/interfaces that are permitted to do it.
+    non-sealed:
+        - modifier used only for classes/interfaces that extend/implement a sealed class/interface.
+        - specifies that the class/interface can be openly inherited/implemented by any other class/interface.
+    permits:
+        - only used with sealed classes/interfaces.
+        - used to specify which classes/interfaces can extend/implement the sealed class/interface.
+        - every class/interface that is permitted MUST directly extend/implement the sealed class, or you'll get an error
+    final:
+        - classes with final modifier don't allow any other classes to extend them.
+        - interfaces cannot be final.
+
+Any class/interface that inherits/implements a sealed class/interface has to have one of the three following modifiers:
+    1. final
+        - cannot be inherited by any other class/interface
+        - cannot be used with interfaces since interfaces cannot be final
+            (interfaces are made to be implemented)
+    2. sealed
+        - can be inherited/implemented only by permitted classes/interfaces
+    3. non-sealed
+        - can be inherited/implemented by any other class/interface
+
+    - this requirement exists to specify whether this class/interface that inherits/implements a sealed class/interface is further sealed or not
+    i.e. to specify how the inherited/implemented sealed class/interface's inheritance is handled further
+
+Example in src directory.
+
+For any class, first it extends, then implements, then permits.
+For interface, first it extends, then permits.
+Any other format for either gives an error
+

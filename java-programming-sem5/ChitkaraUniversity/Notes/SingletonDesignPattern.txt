@@ -1,0 +1,8 @@
+Singleton Design Pattern is a class design which allows only 1 instance of a class to be made.
+
+There are 2 types:
+    1. Eager Instantiation
+        - already creates an instance of the class at runtime, no matter the instance object is needed/used or not
+    2. Lazy Instantiation
+        - crates the instance when required
+        - several ways to do it, each with its own benefits and drawbacks
