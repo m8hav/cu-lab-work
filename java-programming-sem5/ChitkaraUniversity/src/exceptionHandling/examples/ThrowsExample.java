@@ -45,15 +45,5 @@ public class ThrowsExample {
             e.printStackTrace();
             System.out.println("OOPS! The name is null, please check it again!");
         }
-
-
-    }
-
-    public static void test() {
-        try {
-            throw new Exception();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
 }

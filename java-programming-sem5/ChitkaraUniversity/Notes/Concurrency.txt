@@ -1,0 +1,63 @@
+Concurrency is the ability to do more than one thing at the same time.
+
+Example:
+    You can browse my blow on a web browser and listen to music on a media player, at the same time.
+
+Concurrency doesn't necessarily involve multiple applications.
+Running multiple parts of a single applications simultaneously is also termed as concurrency.
+
+Examples:
+    - A word processor formats the text and responds to keyboard events, at the same time.
+    - An audio streaming applications reads the audio from the network, decompresses it and updates the display, all at the same time.
+    - A web server, which is essentially a program running on a computer, serves thousands of requests from all over the world, at the same time.
+
+Such softwares are called concurrent softwares.
+
+Concurrency is a very broad term, and it can be used at various levels.
+For Example:
+    Multiprocessing
+        - multiple processors/CPUs executing concurrently
+        - the unit of concurrency here is a CPU.
+    Multitasking
+        - multiple tasks/processes running concurrently on a single CPU
+        - the operating system executes these tasks by switching between them very frequently
+        - the unit of concurrency here is a Process.
+    Multithreading
+        - multiple parts of the same program running concurrently
+        - In this case, we go a step further and divide the same program into multiple parts/threads and run those threads concurrently.
+
+
+Two Basic Units of Concurrency:
+    1. Process
+        - A process is a program in execution.
+        - It has its own address space, a call stack, and link to any resources such as open files.
+        - A computer system normally has multiple processes running at a time.
+        - The OS keeps track of all the processes and facilitates their execution by sharing the processing time of the CPU among them.
+    2. Threads
+        - A thread is a path of execution within a process.
+        - Every process has at least one thread - called the main thread. The main thread can create additional threads within the process.
+        - Threads within a process share the process's resources including memory and open files.
+        - However, every thread has its own call stack.
+        - Since threads share the same address space of the process, creating new threads and communicating between them is more efficient.
+
+Since version 5.0, the Java platform has also included high-level concurrency APIs.
+
+A Thread is a lightweight process that can execute concurrently.
+    - In Java, a thread is a lightweight sub-process allowing concurrent execution of two or more program parts.
+    - Each thread has its call stack but shares the same memory and resrouces as the process and other threads in the process.
+    - ^ this is why the operational cost of communication between the threads is low, which is an advantage.
+
+There's a difference between concurrency and parallelism.
+A program can run concurrently while not running in parallel.
+
+Multithreading is the process of executing two or more threads of the same process simultaneously.
+
+How to create a thread:
+2 ways to creating a thread:
+    1. By extending a Thread class
+        - Thread class already implements Runnable interface
+        - has many inbuilt methods to use in your new class, like yield() and interrupt() which are not available in the Runnable Interface.
+    2. By implementing a Runnable interface
+        - has a bare-bones implementation
+        - use if you want to implement the functionality yourself or want a simple Thread
+        - or use if you are already extending a class and cannot extend another class
