@@ -1,0 +1,60 @@
+The Collections framework or Java Collection API is a collection of classes and interfaces
+
+Since jdk 1.2
+
+package: java.util.Collection
+It's a root interface in the collection api.
+A collection is an object that represents a group of objects.
+
+It is different from Collections class in java.util.Collections
+
+Top level interface here:    Iterable
+Root interface here:    Collection
+
+Primary advantages of collections framework:
+    Reduces programming effort:
+        by providing data structures and algorithms, so you don't have to write them yourself.
+    Increases performance:
+        by providing high-performance implementations of data structures and algorithms.
+
+Collection API Hierarchy:
+Iterable    (top level interface)
+    Collection  (root interface)
+        List
+            ArrayList
+            LinkedList
+            Vector
+                Stack
+        Queue
+            Deque
+                ArrayDeque
+            PriorityQueue
+        Set
+            HashSet
+            LinkedHashList
+            SortedSet
+                TreeSet
+        Map
+            SortedMap
+                TreeMap
+            HashMap
+            LinkedHashMap
+            HashTable
+
+Collection is all about playing football.
+It has RULES and EXCEPTIONS
+
+Collection:
+    - The root interface in the collection hierarchy
+    - A collection represents a group of objects, known as its elements.
+    - Some collections allow duplicate elements and others do not. Some are ordered and other unordered.
+
+Making a collection:
+    Collection player = new Collection();   WRONG - you cannot instantiate an interface
+    Collection player = new ArrayList();    CORRECT
+
+    sir's file: collections.list.PlayerList.java
+
+
+Collection API doesn't work with primitive types
+So we use wrapper classes for each of these.

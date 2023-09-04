@@ -1,4 +1,4 @@
-main method itself is a thread
+main() method itself is a thread
 
 It is never legal to start a thread more than once.
 
@@ -21,3 +21,61 @@ Thread thread = new Thread();
 thread.start();
     ^ this doesn't give any error
     because in method definition - if target is null the run method doesn't get executed
+
+
+Multithreading is driven by the core concept of a Thread.
+
+THREAD LIFE CYCLE:
+The java.long.Thread class contains a static State enum - which defines its potential states. During any given point of time, the thread can only be in one of these states:
+    6 Thread States:
+    - NEW
+        - a newly created thread that has not yet started the execution
+    - RUNNABLE
+        - either running or ready for execution, but it's waiting for resource allocation
+    - BLOCKED
+        - waiting to acquire a monitor lock to enter or re-enter a synchronized block/method
+    - WAITING
+        - waiting for some other thread to perform a particular action without any time limit
+    - TIMED_WAITING
+        - waiting for some other thread to perform a specific action for a specified period
+    - TERMINATED
+        - has completed its execution
+
+    These states are available in the Thread.State enum.
+    Each of the values can be a state of a thread.
+
+NEW:
+    A NEW Thread (or a Born Thread) is a thread that's been created but not yet started. It remains in this state until you start it using the start() method.
+
+RUNNABLE:
+    - When we've created a new thread and called the start() method on that, it's moved from NEW to RUNNABLE state.
+    - Threads in this state are either running or ready to run, but they're waiting for resource allocation from the system.
+    In a multi-threaded environment, the Thread-Scheduler (which is part of JVM) allocates a fixed amount of time to each thread. So it runs for a particular amount of time, then relinquishes the control of other RUNNABLE threads.
+
+BLOCKED:
+    - when thread currently not eligible to run.
+    - It enters this state when it is waiting for a monitor lock and is trying to access a section of code that is locked by some other thread.
+    - Example:
+        Train Booking System
+        BookMyShow
+        - when you choose seats but close the app the seats show as booked when you open app again and to other users for the next 15 minutes or so
+
+WAITING:
+    - when it's waiting for some other thread to perform a particular action.
+    - According to JavaDocs, any thread can enter this state by calling any one of the following three methods:
+        i. object.wait()
+        ii. thread.join()
+        iii. LockSupport.park()
+
+TIMED_WAITING:
+    - when it's waiting for another thread to perform a particular action within a stipulated amount of time. According to JavaDocs, there are five ways to put a thread on TIMED_WAITING state: thread. sleep(long millis)
+    - According to JavaDocs, there are five ways to put a thread on TIMED_WAITING state:
+      i. thread.sleep(long millis)
+      ii. wait(int timeout) or wait(int timeout, int nanos)
+      iii. thread.join(long millis)
+      iv. LockSupport.parkNanos
+      v. LockSupport.parkUntil
+
+TERMINATED:
+    - state of a dead thread
+    - when it has either finished execution or was terminated abnormally

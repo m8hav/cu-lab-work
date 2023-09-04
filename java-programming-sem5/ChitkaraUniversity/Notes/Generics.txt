@@ -1,0 +1,69 @@
+Generics:
+
+Introduced in jdk 1.5 / Java 5.0.
+
+(from Google)
+The Generics Framework:
+- introduced in Java SE 5.0 and updated in Java SE 7 and 8
+- provides support that allows for the parameterization of types.
+- The benefit of generics is the significant reduction in the amount of code that needs to be written when developing a library.
+
+Sir's presentation:
+- Java 5.0 introduced Java Generics with the aim of reducing bugs and adding an extra layer of abstraction over types.
+
+Example:
+    List ll = new LinkedList();
+    ll.add(new Integer(1));
+    Integer i = ll.iterator().next();
+
+    - Surprisingly, the compiler will complain about the last line. It doesn't know what datatype is returned.
+    - The compiler will require an explicit casting, like below.
+        Integer i = (Integer) ll.iterator().next();
+
+Java Generics allows us to create a single class, interface, and method that can be used with different types of dat (objects).
+This helps us to reuse our code, and the Collections Framework uses it.
+
+Note: Generics does not work with primitive types (int, float, char, etc).
+
+ArrayList<Integer> list = new ArrayList<Integer>();
+^ ArrayList is Base Type
+            ^ Integer is Parameter Type, was mandatory on both sides in Java 5.
+
+Storing values in collections:
+    Java 2 till further:
+        Box integerBox = new Box();
+        - any type of value can be stored
+            - it's a strength as it allows adding values of different datatypes.
+            - it's a weakness because when getting values you'll have to typecast values to different types which is a difficult job.
+        - type was unknown when accessing values from this collection.
+        - so requires explicit casting.
+    Java 5, 6:
+        Box<Integer> integerBox = new Box<Integer>();
+        - doesn't require explicit casting.
+    Java 7:
+        Box <Integer> integerBox = new Box<>();
+
+To create a generic, we use <>. This pair of angle brackets, <>, is informally called the diamond.
+
+The core idea behind generic:
+    - if programmers could express their intention to use specific types, the compiler could ensure the correctness of such types.
+
+Two types of Generics:
+    1. Generic Class
+    2. Generic Methods
+
+Type Parameter Naming Conventions:
+    - By convention, type parameter names are single, uppercase letters.
+    - Without its naming convention, it would be difficult to tell the difference between a type variable annd an ordinary class or interface name;
+    - The most commonly used type parameter names are:
+        E - Element (used extensively by the Java Collections Framework)
+        K - Key
+        N - Number
+        T - Datatype parameter
+        V - Value
+        S, U, V - 2nd, 3rd, 4th types
+
+    - A type variable can be any non-primitive type you specify.
+        Example:
+            Box <Planet> planetBox = new Box<>();
+

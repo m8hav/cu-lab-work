@@ -1,0 +1,32 @@
+CONCURRENCY ISSUES:
+
+In Java (and other programming languages), threads share the same address space, and therefore, have access to all variables, objects, methods and global scope of the application or program.
+
+When more than one thread attempts to access the same piece of data at the same point of time, (i.e. concurrently), there can be several problems, such as thread synchronization issues, thread interference issues, and so forth.
+
+Thread interference occurs when threads are competing for the same resources, which can lead to unexpected behaviour and unexpected results.
+
+
+Thread Interference:
+    - Two or more independent threads performing different actions on the same data may interleave if they share the same memory. This leads to inconsistent data in memory. Threads interleave when they perform operations in several steps, which can overlap. This phenomenon is also known as thread interference.
+
+    - Java offers several synchronization mechanisms to avoid thread interference errors to ensure that only one thread can access an object at a time. This can be done through the use of locks, monitors, and other synchronization techniques. The most basic synchronization mechanism is the synchronized keyword, which can help developers block access to a method in its entirety.
+
+
+Why does Thread Interference Occur in Java?
+    - One common cause of thread interference is when two threads simultaneously try to iterate over a collection of objects. This can happen even if both threads use the same iterator; each thread will still have its copy of the iterator, but they will be accessing the same underlying objects. If one thread modifies an object while another thread is iterating over it, the results will be unpredictable.
+
+    - Another common cause of interference is when one thread calls a method on an object that another thread is using. For example, imagine two threads operating on a linked list: one thread is calling the add() method to add a new node to the list, while the other is calling the remove() method to remove a node from the list. If both threads operate on the same list, they could end up interfering with each other's work and causing unexpected results.
+
+
+Thread Interference vs Memory Consistency in Java
+    - google and write here
+
+
+How to Avoid Thread Interference Errors in Java:
+    - Shared data should be synchronized. In doing so, only one thread will be able to access a piece of shared data any any given point of time.
+    - Declare variables as volatile if multiple threads will access them. It prevents the compiler from caching the value, which could cause issues if another thread changes it.
+    - If possible, use immutable objects. Since immutable objects cannot be modified, thread interference errors will not occur.
+    - Use multiple threads to process long-running tasks. Since each thread will only access a small portion of the data, the chances of thread interference errors will be reduced.
+    - When working with shared objects, use locks or other synchronization mechanisms. By doing so, you can prevent multiple threads from accessing an object concurrently.
+

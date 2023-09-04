@@ -1,0 +1,26 @@
+Map (Interface):
+    - An object that maps keys to values.
+        - A map cannot contain duplicate keys.
+        - Each key can map to at most one value.
+    - This interface is a member of the Java Collections Framework.
+    Example:
+        Map<Integer, String> player = new HashMap<>();
+
+        - The first type is the key and cannot be duplicate
+        - The second type is the value and can be duplicate
+
+
+HashMap - implements Map
+    - unordered collection
+    - duplicate values
+    - not synchronized
+
+    - A HashMap cannot contain duplicate keys
+    - Java hashMap allows null values and the null key.
+    - HashMap is an unordered collection. It does not guarantee any specific order of the elements.
+
+    Example:
+        HashMap<Integer, String> player = new HashMap<>();
+
+    Add or Update values:
+        - put() method for both
