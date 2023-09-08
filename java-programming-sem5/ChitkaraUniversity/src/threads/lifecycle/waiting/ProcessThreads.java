@@ -1,4 +1,4 @@
-package threads.creation.lifecycle.waiting;
+package threads.lifecycle.waiting;
 
 public class ProcessThreads implements Runnable {
     @Override

@@ -1,4 +1,4 @@
-package threads.creation.lifecycle.threadLifeCycle;
+package threads.lifecycle.threadLifeCycle;
 
 public class TLCMain {
     public static void main(String[] args) {

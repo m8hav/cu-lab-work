@@ -1,0 +1,74 @@
+Date-Time API
+
+Update came in 1.8.
+- legacy one since the very beginning.
+
+Legacy Date Time API (Prior to Java 8)
+    - java.util.Date
+    - java.util.Calendar
+    - java.util.SimpleDateFormat
+    - java.util.TimeZone
+    - System.currentTimeMillis();
+
+    These APIs were not much popular as compared to many other 3rd party libraries.
+    Java community continuously complained about the problems in effectively using these classes.
+
+Legacy Date-Time API Issues:
+    - A Date class shall represent a date, but it represents an instance which has hour, minutes and seconds as well.
+    - But Date doesn't have any associated time zone. It picks up the default timezone automatically. You cannot represent a date some other timezone.
+    - Classes are mutable. So that leaves additional burden on developers to clone the date before passing a function, which can mutate it.
+    and many more...
+
+Main Issues:
+    - Not thread safe
+    - Not zoned
+    - Not enough operations
+    2 more main ones - check google.
+
+DateTime API since Java 8:
+    Classes:
+        - Clock
+        - Duration
+        *- LocalDate
+        *- LocalDateTime
+        *- LocalTime
+        ...
+    Enums:
+        ...
+    Exceptions:
+        ...
+
+Get Current Date and Time
+    all date-time classes have a factory method now()
+    - it is the preferred way to get the current date and time in Java 8.
+
+    LocalTime
+    LocalDate
+    LocalDateTime
+
+
+Parse Date and Time:
+    Date parsing in done with the help of DateTimeFormatter class and parse() methods in date-time classes.
+
+    String dateString = "2020-04-08 12:30";
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+    LocalDateTime = parsedDateTime = LocalDateTime.parse(dateString, formatter);
+
+    System.out.println(parsedDateTime);
+
+
+Calculate Days Between Two Dates:
+    To calculate number of days between two dates in Java 8 using ChronoUnit.DAYS.between() and LocalDate.until() methods.
+
+    LocalDate date1 = LocalDate.now();
+    LocalDate date2 = date1.plusDays(99);
+
+    long diffInDays = ChronoUnit.DAYS.between(date1, date2);
+
+
+Date Time API is MASSIVELY used in:
+    - Space domain * - VERY MASSIVELY USED
+        - NASA, ISRO, etc tracking every movement of every planet etc with every passing moment
+    - Financial Institutions
+    - Booking systems

@@ -2,13 +2,13 @@ Generics:
 
 Introduced in jdk 1.5 / Java 5.0.
 
-(from Google)
+FROM GOOGLE:
 The Generics Framework:
 - introduced in Java SE 5.0 and updated in Java SE 7 and 8
 - provides support that allows for the parameterization of types.
 - The benefit of generics is the significant reduction in the amount of code that needs to be written when developing a library.
 
-Sir's presentation:
+SIR'S PRESENTATION:
 - Java 5.0 introduced Java Generics with the aim of reducing bugs and adding an extra layer of abstraction over types.
 
 Example:
@@ -66,4 +66,35 @@ Type Parameter Naming Conventions:
     - A type variable can be any non-primitive type you specify.
         Example:
             Box <Planet> planetBox = new Box<>();
+
+Generics are checked at compile time.
+
+The <T> in method signature implies that the method is dealing with generic types.
+
+Bounded Type Parameters:
+    - There may be times when you want to restrict the types that can be used as type arguments in a parameterized type.
+    - For example, a method that operates on numbers might only want to accept instances of Number or its subclasses. This is what bounded type parameters are for.
+    - To declare a bounded type parameter, list the type parameter's name, followed by the extends keyword, followed by its upper bound, which in this example is Number.
+    - Note that, in this context, extends is used in general sense to mean either "extends" (as in classes) or "implements" (as in interfaces).
+    - Proper Example:
+        Money class should only allow Double data type, not even Number.
+
+Wildcards:
+    - Generic-type bounding allows us to restrict what types can be used instead of the generic type.
+    - This Java feature makes it possible to treat generics polymorphically.
+
+    Example:
+        A method that operates on numbers might only want to accept instances of the Number class or its subclasses.
+        This is what bounded type parameters are for.
+
+    We can use wildcards with bounds in three ways:
+    1. Unbounded Wildcards
+        List<?>
+            - represents a list of any type
+    2. Upper Bounded Wildcards
+        List <? extends Number>
+            - represents a list of Number of its subtypes (like Double or Integer)
+    3. Lower Bounded Wildcards
+        List <? super Integer>
+            - represents a list of Integer or its supertypes (like Number or Object)
 

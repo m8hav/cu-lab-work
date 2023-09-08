@@ -1,4 +1,4 @@
-package threads.creation.lifecycle.timedWaiting;
+package threads.lifecycle.timedWaiting;
 
 class DemoTimeWaitingRunnable implements Runnable {
     @Override

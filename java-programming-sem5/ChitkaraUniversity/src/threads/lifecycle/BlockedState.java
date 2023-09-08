@@ -1,4 +1,4 @@
-package threads.creation.lifecycle;
+package threads.lifecycle;
 
 class DemoBlockedRunnable implements Runnable {
 //    private void commonResource() {

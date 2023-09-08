@@ -1,4 +1,4 @@
-package threads.creation.lifecycle.waiting;
+package threads.lifecycle.waiting;
 
 public class WaitingMain {
     public static void main(String[] args) throws InterruptedException {

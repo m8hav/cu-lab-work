@@ -1,0 +1,53 @@
+Regular expressions in Java (or pretty much every other language where Regex exists) comprise a series of characters  that define a particular search pattern! These are extensively used in Find and Replace algorithms, and search engines where it filters out the strings based on a particular pattern.
+
+Famous American Mathematician Stephen Cole Kleene brought out the concept of regular expressions in the 1950s.
+
+Regular expressions, or regexes for short, provide a concise and precise specification of patterns to be matched in text.
+
+A regular expression can be a complicated pattern or just a simple character.
+
+
+Java Package:
+    java.util.regex API
+    - Pattern
+    - Matcher
+    - PatternSyntaxException
+    - MatchResult Interface
+
+
+Pattern:
+    - Pattern object is a compiled regex.
+        - already compiled, not constructed from constructors.
+    - The Pattern class provides no public constructors.
+    - To create a pattern, we must first invoke one of its public static compile methods, which will then return a Pattern object.
+    - These methods accept a regular expressions as the first argument.
+
+Matcher:
+    - Matcher object interprets the pattern and performs match operations against an input String.
+    - It also defines no public constructors.
+    - We obtain a Matcher object by invoking the matcher method on a Pattern object.
+
+Time Complexity of Regex Matcher find() method:
+    The time complexity of the find() method in the Matcher class in Java is O(m * n)
+        - m is the length of the regular expression
+        - n is the length of the string being matched
+    - This is because the find() method must iterate through the entire string, comparing each character to the regular expression.
+    - It can be reduced by using the find(int) method, which allows the user to specify the starting index of the search.
+
+PatternSyntaxException:
+    - PatternSyntaxException object is an unchecked exception that indicates a syntax exception.
+
+
+
+The Character Classes:
+    It is a set of characters that
+
+    [abc]
+        - find a character from the options given inside the bracket (simple)
+    [^abc]
+        - ^ is negation here
+        - find character not mentioned in the bracket (negation)
+    [a-zA-Z]
+        - a through z or A through Z inclusive (range)
+    [a-dm-p]
+        - a through d and m through p

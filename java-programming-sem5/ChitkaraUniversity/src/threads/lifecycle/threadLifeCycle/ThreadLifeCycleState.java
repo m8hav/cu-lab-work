@@ -1,4 +1,4 @@
-package threads.creation.lifecycle.threadLifeCycle;
+package threads.lifecycle.threadLifeCycle;
 
 public class ThreadLifeCycleState implements Runnable {
     public ThreadLifeCycleState() {

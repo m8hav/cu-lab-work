@@ -1,7 +1,7 @@
 package generics.genericBox.example2;
 
 public class GenericBox<T> {
-    private T [] boxData;
+    private T[] boxData;
 
     public T[] getBoxData() {
         return boxData;
@@ -15,17 +15,30 @@ public class GenericBox<T> {
         this.boxData = boxData;
     }
 
-    public <T> void showBoxDataGeneric(T[] boxData) {
-//    public <T> void showBoxData() {
+//    public <T> void showBoxDataGenericNoArgs() {
+////    ^ removing <T> removes error in T data
+//        System.out.print("Generic: ");
+//        for (T data: boxData) {
+//            System.out.print(data + " ");
+//        }
+//        System.out.println();
+//    }
+    public <T> void showBoxDataGenericWithArgs(T[] boxData) {
         System.out.print("Generic: ");
         for (T data: boxData) {
             System.out.print(data + " ");
         }
         System.out.println();
     }
-    public void showBoxDataSimple(T[] boxData) {
-//    public <T> void showBoxData() {
-        System.out.print("Simple: ");
+    public void showBoxDataSimpleNoArgs() {
+        System.out.print("Simple No Args: ");
+        for (T data: boxData) {
+            System.out.print(data + " ");
+        }
+        System.out.println();
+    }
+    public void showBoxDataSimpleWithArgs(T[] boxData) {
+        System.out.print("Simple With Args: ");
         for (T data: boxData) {
             System.out.print(data + " ");
         }
@@ -40,24 +53,29 @@ public class GenericBox<T> {
 
     public static void main(String[] args) {
         String [] item_names = {"Pizza", "Burger", "Coke", "Fries", "Wrap"};
-
-        GenericBox <String> sObj = new GenericBox<>(item_names);
-//        GenericBox <String> sObj = new GenericBox<>();
-        sObj.showBoxDataGeneric(item_names);
-        sObj.showBoxDataSimple(item_names);
-//        sObj.showBoxData();
-        sObj.inspectGeneric();
-        sObj.inspectSimple();
-        System.out.println();
-
-
         Double[] item_prices = {500.00, 250.00, 50.00, 100.00, 200.00};
 
+        GenericBox <String> sObj = new GenericBox<>(item_names);
+        sObj.<String>showBoxDataGenericWithArgs(item_names);
+        sObj.<String>showBoxDataSimpleWithArgs(item_names);
+        sObj.<String>showBoxDataSimpleNoArgs();
+        sObj.<String>inspectGeneric();
+        sObj.<String>inspectSimple();
+        System.out.println();
+
         GenericBox <Double> dObj = new GenericBox<>(item_prices);
-        dObj.showBoxDataGeneric(item_prices);
-        dObj.showBoxDataSimple(item_prices);
-        dObj.inspectGeneric();
-        dObj.inspectSimple();
+        dObj.<Double>showBoxDataGenericWithArgs(item_prices);
+        dObj.<Double>showBoxDataSimpleWithArgs(item_prices);
+        dObj.<Double>showBoxDataSimpleNoArgs();
+        dObj.<Double>inspectGeneric();
+        dObj.<Double>inspectSimple();
+        System.out.println();
+
+//        dObj.<Integer>showBoxDataGenericWithArgs(item_prices);
+        dObj.<Integer>showBoxDataSimpleWithArgs(item_prices);
+        dObj.<Integer>showBoxDataSimpleNoArgs();
+        dObj.<Integer>inspectGeneric();
+        dObj.<Integer>inspectSimple();
 
     }
 }
