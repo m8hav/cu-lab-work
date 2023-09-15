@@ -1,0 +1,87 @@
+Data structures are the core building blocks of algorithms and real-life applications.
+
+EVERY SINGLE APPLICATION or PROGRAM uses a data structure.
+There's no application or program in the world that works without using any data structures.
+
+Different data structures take different times to execute various operations. So we compare the efficiency of operations provided by multiple data structures and choose the correct data structure among them to improve our code performance.
+Examples:
+    Tree
+    Graph
+
+"Updating an efficient data structure in a slow program can work in the same way an organ transplant does in a sick patient."
+
+The data structure is an idea to organize various types of data in memory.
+In other words, data structures are several ways to efficiently organize data in memory to perform several operations.
+* Data is information, and operations are algorithms working on that data to get valuable insights.
+Data Structures = Data + Permissible operations on the data.
+
+Operations on any data structures can be grouped into two types:
+    We perform query operations to *update or *change information stored in the data structure,
+
+    Query Operations
+        - search(S, k)
+        - findMax(S)
+        - findMin(S)
+        ...
+    Modification Operations
+        - insert(S, k)
+        - delete(S, k)
+        - sort(d)
+        ...
+
+    We perform query operations to get some information available in the data structure.
+
+
+Classification of Data Structures:
+    i. Primitive
+    ii. Non-Primitive
+        - Linear
+            - Array, Linked List, Stack, Queue, etc.
+        - Non-Linear
+            - Tree, Graph, Set, etc.
+
+    Primitive:
+        - Primitive data structures are the basic building blocks of data structures.
+        - They are predefined by the programming language and cannot be broken down into smaller units.
+        - Primitive data structures are typically used to store simple data types, such as integers, floats, and strings.
+
+    Non-Primitive:
+        - derived from primitive
+        - user defined data structure that stores data of different types as a single entity with a relationship between each data item.
+        - it can be classified into two categories based on the order of organizing and accessing data:
+            - Linear Data Structures
+                - Elements are arranged linearly
+                - Elements can be traversed in a single direction
+            - Non-Linear Data Structures
+                - Elements are not arranged linearly
+                - Elements can be traversed in multiple directions
+
+
+Abstract Data Types:
+    Basic idea of data structures starts from studying abstract data types.
+    Abstract data types only provide an interface about what operations can be performed but not how these operations will be implemented.
+    In simple words, it does not specify how data wil be organized in memory and what algorithms will be used for implementing the operations.
+
+    Stack (LIFO)
+        isEmpty()
+        isFull()
+        push()
+        pop()
+        capacity() not present because it wasn't mentioned in ADT
+
+    Queue (LIFO)
+        isEmpty()
+        isFull()
+        peek()
+        enqueue() (same as push() from C++)
+        dequeue() (same as pop() from C++)
+        
+
+Real Life Examples of Data Structures:
+    Applications of Arrays:
+
+    Applications of Singly Linked List:
+
+    Applications of Doubly Linked List:
+
+    Applications of Circular Linked List:

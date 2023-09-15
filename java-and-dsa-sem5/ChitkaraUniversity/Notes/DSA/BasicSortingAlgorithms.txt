@@ -1,0 +1,45 @@
+VisualAlgo.net for visual representation animations of various algorithms.
+
+NEVER CHANGE IMPLEMENTATION IN ANY ALGO FOR ANYTHING YOU NEED TO DO!
+
+If ever asked to sort an array in descending order,
+    - NEVER change the algorithm itself.
+    - Instead, use a container like a stack to put in values in ascending order and then values are popped out in descending order.
+    - Don't use any inbuilt methods like reverse() after sorting using some sorting algorithms either,
+        or a point arises that they could have used the inbuilt sort() method in the first place,
+        but they're looking for your approach.
+
+1. Bubble Sort:
+    - Bubble sort is a basic sequential sorting algorithm.
+    - It sorts by comparing neighboring elements and swaps them if they are out of order.
+    - If 'n' is the side of input, Bubble Sort requires 'n-1' passes to sort n elements.
+    - It works by swapping the two adjacent elements of an array if they're in the wrong order.
+
+    Space Complexity:
+
+    Time Complexity:
+        Best: O()
+        Average: O()
+        Worst: O()
+
+
+2.  Selection Sort:
+    -
+
+    Space Complexity:
+
+    Time Complexity:
+        Best: O()
+        Average: O()
+        Worst: O()
+
+
+3.  Insertion Sort:
+    -
+
+    Space Complexity:
+
+    Time Complexity:
+        Best: O()
+        Average: O()
+        Worst: O()

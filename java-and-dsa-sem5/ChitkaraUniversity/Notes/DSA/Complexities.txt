@@ -1,0 +1,14 @@
+Is your algorithm a best fit?
+
+
+Time complexity:
+    - deals with the amount of time required by the algorithm or program to execute to completion.
+
+
+Space Complexity:
+    - deals with the amount of memory required in a system for a particular algorithm
+
+    Space complexity = Auxiliary Space + Space taken by input values.
+
+
+Importance of time and space complexity in data structures:

@@ -1,0 +1,12 @@
+Quick Sort
+    - select a pivot element from start or end
+    - do the partitioning and place the pivot element at its correct position
+    - recursive call of the quicksort() to the leftover left and right portions of the pivot element
+
+Merge Sort
+    - recursively split array from middle and send the left and right halves to merge sort function
+    - combine the sorted partitions after the recursive call
+    - stop recursion when size reaches <= 1
+
+Heap Sort
+    - requires learning about Heapify

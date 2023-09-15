@@ -1,0 +1,12 @@
+Data Structure Workspace:
+    - Stack
+    - Queue
+    - Recursion
+    - Linked LIst
+    - Tree
+    - Graph
+    - Tries
+    - Sorting Algorithms
+    - Searching Algorithms
+    - ...
+    - ...
