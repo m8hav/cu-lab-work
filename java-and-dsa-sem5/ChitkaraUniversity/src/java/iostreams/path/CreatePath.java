@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class CreatePath {
     public static void main(String[] args) {
-        Path path = Paths.get("C:/Users/BartBruh/Documents/GitHub/cu-lab-work/java-programming-sem5/ChitkaraUniversity/IOFiles");
+        Path path = Paths.get("C:/Users/BartBruh/Documents/GitHub/cu-lab-work/java-and-dsa-sem5/ChitkaraUniversity/IOFiles");
 
         Path newDirectory = null;
         Path newFile = null;

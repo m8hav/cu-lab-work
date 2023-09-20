@@ -9,7 +9,7 @@ public class CreateDirectory {
 
         System.out.print("Path: ");
         String path = input.nextLine();
-//        C:/Users/BartBruh/Documents/GitHub/cu-lab-work/java-programming-sem5/ChitkaraUniversity/IOFiles
+//        C:/Users/BartBruh/Documents/GitHub/cu-lab-work/java-and-dsa-sem5/ChitkaraUniversity/IOFiles
 
 
         do {

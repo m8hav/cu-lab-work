@@ -1,4 +1,4 @@
-package dsa.searchingAlgorithms;
+package dsa.searching;
 
 public class SearchingAlgorithms {
     public static int doLinearSearch(int[] arr, int key) {

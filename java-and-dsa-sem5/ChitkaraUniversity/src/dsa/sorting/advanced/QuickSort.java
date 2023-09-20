@@ -1,4 +1,4 @@
-package dsa.advancedSortingAlgorithms;
+package dsa.sorting.advanced;
 
 public class QuickSort {
     public static void swapElements(int[] arr, int index1, int index2) {

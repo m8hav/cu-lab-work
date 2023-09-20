@@ -1,6 +1,6 @@
-package dsa.basicSortingAlgorithms;
+package dsa.sorting.basic;
 
-public class BasicSortingAlgorithms {
+public class BasicSorting {
 //    DOESN'T ACCEPT ARRAYS OF ANY TYPE YET
     public static <T> T[] doTemplateBubbleSort(T[] data) {
         if (data == null || data.length <= 1) return data;

@@ -1,0 +1,32 @@
+@import "./abstracts/nav.css";
+
+:root {
+  --nav-height: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-size: 20px;
+}
+
+main {
+  margin-top: var(--nav-height);
+  padding: 0 3rem 3rem;
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+section {
+  padding-top: 2rem;
+}
+
+section h2 {
+  margin-bottom: 0.5rem;
+}

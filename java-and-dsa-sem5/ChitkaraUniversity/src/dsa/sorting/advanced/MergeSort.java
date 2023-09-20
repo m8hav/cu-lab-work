@@ -1,4 +1,4 @@
-package dsa.advancedSortingAlgorithms;
+package dsa.sorting.advanced;
 
 public class MergeSort {
 

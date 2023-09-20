@@ -4,11 +4,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+abstract class New {
+    public void bruh(){
+
+    }
+}
+
 public class CreateFile {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String path = "C:/Users/BartBruh/Documents/GitHub/cu-lab-work/java-programming-sem5/ChitkaraUniversity/IOFiles";
+        String path = "C:/Users/BartBruh/Documents/GitHub/cu-lab-work/java-and-dsa-sem5/ChitkaraUniversity/IOFiles";
         System.out.println("Path: " + path);
 
         System.out.print("File: ");

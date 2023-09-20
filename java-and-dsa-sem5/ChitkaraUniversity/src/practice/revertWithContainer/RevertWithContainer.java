@@ -1,6 +1,6 @@
 package practice.revertWithContainer;
 
-import dsa.basicSortingAlgorithms.BasicSortingAlgorithms;
+import dsa.sorting.basic.BasicSorting;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -40,7 +40,7 @@ public class RevertWithContainer {
     }
 
     public void doSort() {
-        arr = BasicSortingAlgorithms.doIntegerSelectionSort(arr);
+        arr = BasicSorting.doIntegerSelectionSort(arr);
     }
 
     public void displayArray() {
