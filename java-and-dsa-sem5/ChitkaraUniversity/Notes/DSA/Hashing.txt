@@ -1,0 +1,27 @@
+https://www.geeksforgeeks.org/hashing-data-structure/
+
+- Hashing is a technique or process of mapping keys, and values into the hash table by using a hash function.
+- It is done for faster access to elements.
+- The efficiency of mapping depends on the efficiency of the hash function used.
+
+Let a hash function H(x) maps the value x at the index x%10 in an Array.
+If the list of values is [11,12,13,14,15] it will be stored at positions {1,2,3,4,5} in the array or Hash table respectively.
+
+
+
+Collision:
+    2 values try to get set at the same index in hashing
+    Eg.
+        5 at index 5 i.e. 5 % 10 = 5
+        15 at index 5 i.e. 15 % 10 = 5
+        both try to get stored at index 5
+
+2 ways of dealing with collisions:
+    Open Hashing - ?
+        - Separate Chaining
+    Closed Hashing - Open Addressing Collision Handling technique
+        1.  Linear Probing
+        2.  Quadratic Probing
+        3.  Double Hashing
+
+

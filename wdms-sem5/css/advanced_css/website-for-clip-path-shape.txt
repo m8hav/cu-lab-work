@@ -1,0 +1,4 @@
+https://bennettfeely.com/clippy/
+
+Example output:
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);

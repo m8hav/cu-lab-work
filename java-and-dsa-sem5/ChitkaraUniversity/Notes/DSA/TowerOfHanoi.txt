@@ -1,0 +1,7 @@
+Objective: To move disks from source to destination
+
+Total Steps: 2^n - 1, n is the total number of disks
+
+Logic:
+    1. From Source to Auxiliary
+    2. From Auxiliary to Destination

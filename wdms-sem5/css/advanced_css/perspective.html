@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perspective</title>
+  <style>
+
+    #div-outer {
+      width: 350px;
+      height: 250px;
+      background-color: grey;
+      font-size: 18px;
+      text-align: center;
+      margin: 100px 0 0 100px;
+      perspective: 800px;
+    }
+    
+    .div-inner {
+      width: 350px;
+      height: 250px;
+      background-color: tomato;
+      transform: rotateX(80deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>CSS Perspective</h1>
+  <div id="div-outer">
+    Outer div
+    <div class="div-inner">
+      Inner div 1
+    </div>
+    <div class="div-inner">
+      Inner div 2
+    </div>
+  </div>
+</body>
+</html>

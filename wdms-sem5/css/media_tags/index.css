@@ -1,0 +1,59 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;        /*prevents the size of box from inc on using padding and margin*/
+    
+}
+/* Flexbox*/
+/*
+#main{
+    width: 500px;
+    height: 500px;
+    border:1px solid black;
+    display: flex;;
+}
+.child{
+    width:200px;
+    height:200px;
+    border:1px solid black;
+} */
+
+
+/*nav*/
+nav{
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+    display: flex;
+    padding:  0 20px;
+    
+}
+.navbar_brand{
+    flex:1;             /*takes 50%size if flex:1 is given as two child elements*/
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+}
+ul{
+    flex:1;             
+    list-style: none;        /*to remove bullets*/ 
+    line-height: 30px;
+    text-align: right;
+    
+}
+li{
+    display: inline;            /*to get all li elements in a row*/
+    margin:20px;
+    padding:10px;
+    
+}
+a{
+    text-decoration: none;   /*to remove underline of links*/
+    color: black;
+} 
+
+
+
+

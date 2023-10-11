@@ -1,0 +1,103 @@
+<!DOCTYPE html>           
+<!-- DOCTYPE tells that it's HTML 5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+    <!-- FlexBox    to be applied on parent ele-->
+    <!-- <div id="main">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div> -->
+
+
+    <nav>
+        <a href="" class="navbar_brand">Navbar</a>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- <table border="1" width="100%">
+        <tr>
+            <td colspan="2">name</td>           
+            <td>age</td>
+            
+        </tr>
+        <tr>
+            <td>satvik</td>
+            <td>bhardwaj</td>
+            <td>21</td>
+        </tr>
+        
+    </table> -->
+
+
+    <!-- <iframe width="100%" height="500" 
+    src="https://www.youtube.com/embed/FiBL5k5eCqw?si=oavgRwTaEEjtSXLz" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe> -->
+
+    <!-- <audio controls src="a.mp3"></audio>      
+    
+    <video  controls src="b.mp4" width="100%" height="300px"></video>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#a2d9ff" fill-opacity="1" 
+        d="M0,192L9.6,181.3C19.2,171,38,149,58,144C76.8,139,96,149,115,176C134.4,203,154,245,173,266.7C192,288,
+        211,288,230,277.3C249.6,267,269,245,288,234.7C307.2,224,326,224,346,224C364.8,224,384,224,403,218.7C422.4,
+        213,442,203,461,165.3C480,128,499,64,518,37.3C537.6,11,557,21,576,42.7C595.2,64,614,96,634,112C652.8,128,
+        672,128,691,112C710.4,96,730,64,749,74.7C768,85,787,139,806,144C825.6,149,845,107,864,96C883.2,85,902,107,
+        922,117.3C940.8,128,960,128,979,138.7C998.4,149,1018,171,1037,181.3C1056,192,1075,192,1094,160C1113.6,128,
+        1133,64,1152,37.3C1171.2,11,1190,21,1210,53.3C1228.8,85,1248,139,1267,176C1286.4,213,1306,235,1325,208C1344,
+        181,1363,107,1382,74.7C1401.6,43,1421,53,1430,58.7L1440,64L1440,320L1430.4,320C1420.8,320,1402,320,1382,
+        320C1363.2,320,1344,320,1325,320C1305.6,320,1286,320,1267,320C1248,320,1229,320,1210,320C1190.4,320,1171,
+        320,1152,320C1132.8,320,1114,320,1094,320C1075.2,320,1056,320,1037,320C1017.6,320,998,320,979,320C960,320,
+        941,320,922,320C902.4,320,883,320,864,320C844.8,320,826,320,806,320C787.2,320,768,320,749,320C729.6,320,710,
+        320,691,320C672,320,653,320,634,320C614.4,320,595,320,576,320C556.8,320,538,320,518,320C499.2,320,480,320,
+        461,320C441.6,320,422,320,403,320C384,320,365,320,346,320C326.4,320,307,320,288,320C268.8,320,250,320,230,
+        320C211.2,320,192,320,173,320C153.6,320,134,320,115,320C96,320,77,320,58,320C38.4,320,19,320,10,320L0,320Z">
+        </path>
+    </svg> -->
+
+    <p contenteditable="true">Hello you can edit me</p>  <!--contenteditable allows you to edit the code in the browser-->
+   
+    <form action="www.google.com" method="post" novalidate> 
+        <!--novalidate ensures that any HTML validation becomes nonvalid-->
+    <!--This action tells about the page on which we want to redirect after form submission-->
+
+        <label for="name" required>Name</label>               <!--for attribute must have id name of the input box to which it's associated.It helps to get focus on the input box when we click on the label value-->
+        <input id="name" type="text" placeholder="Name" /><br/>
+        <input type="password" placeholder="Password"/><br/>
+        <input type="checkbox"/> 
+        <input type="radio" name="btn"/>       <!--This name attribute ensure that radio btns are not unique-->
+        <input type="radio" name="btn"/><br/>
+        <input type="color"/><br/>
+        <input type="datetime-local"/><br/>
+        <input value="India" readonly/>    <!--readonly does not allow you to edit the input value-->
+
+        <button type="submit">Submit</button>
+    </form> 
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+Main points about JavaScript:
+- Interpretable
+- High level programming language
+- Client and Server Side
+- lightweight language
+- supports many framework
+- works in sync with other languages 
+
+- Uses
+  - web application & mobile application (React native)
+  - Deploying of Server
+  - Games with libraries
+  - interactive web pages
+  - Forms interactive 
+
+- Faster Execution and light weight
+- reduce server load - execute code on client side before sharing to Server
+- Audio and Video playing 
+
+- Node js is used in backend-side of server
+
+
+Keywords used to declare variables:
+- var
+  - function scope (not global scope)
+  - redeclaration allowed
+  - redefinition allowed
+  - variable hoisting (var is treated as if declared at top but not initialized)
+
+- let
+  - block (curly braces) scope
+  - redeclaration not allowed
+  - redefinition allowed
+  - no variable hoisting
+
+- const
+  - same as let but value can't be changed here i.e. immutable
+  - block (curly braces) scope
+  - redeclaration not allowed
+  - redefinition not allowed
+  - has to be initialized along with declaration or gives error since const assumes the value is not to be changed so it should be specified already
+  - no variable hoisting
+
+
+Variable Names:
+- can start with $, _, letters
+- can't start with numbers
+
+How does JS know type?
+- Dynamic Type Setting
+- it will decode itself the type of variable
+  
+
+Data Types:
+  1. Primitive
+  - String
+  - Number
+  - Boolean
+  - Undefined
+  - Null/NaN
+  - BigInt - n at last of number. Eg: 1234567890123456789012345678901234567890n
+  - Symbol
+
+  2. Non-Primitive:
+  - Object
+  - Array
+  - RegEx(s)
+
+Difference between Null, Undefined and NaN:
+  - Null - Null represents an empty value and carry no meaningful information.
+  - Undefined - Undefined represents any value that has not been defined anywhere in the program. If any variable or operation isn't able to produce a meaningful value, it returns undefined.
+  - NaN - NaN stands for Not a Number. You get this value when you try to do some operation that can't yield a meaningful result.

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform style</title>
+  <style>
+    div {
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .parent {
+      width: 400px;
+      height: 250px;
+      margin: 0 0 70px 100px;
+      background-color: grey;
+      /* perspective: 800px; */
+      /* perspective not required */
+      transform: rotateY(30deg);
+      transform-style: preserve-3d;
+    }
+    #child {
+      width: 400px;
+      height: 250px;
+      background-color: pink;
+      padding-top: 20px;
+      transform: rotateX(60deg);
+      /* child rotate axis has to be different from parent */
+      transform-origin: bottom;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>CSS Transform-Style</h1>
+  <div class="parent">
+    parent div
+    <div id="child">
+      child div
+    </div>
+  </div>
+</body>
+</html>

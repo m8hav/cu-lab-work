@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch and shit</title>
+</head>
+
+<body>
+  <div>
+    <h1>Callback Stuff - leads to callback hell for multiple </h1>
+    
+    <button onclick="fetchAndLogPostsDirectly()">Fetch and log posts directly</button>
+    <!-- <button onclick="fetchAndPrintPosts()">Fetch and Print Posts</button> -->
+    <button onclick="fetchAndLogPostsUsingCallback()">Fetch and log posts using callback</button>
+    <button onclick="alert('Alerted')">Alert</button>
+    <button onclick="runSync()">Run Sync</button>
+  </div>
+  <br>
+  <br>
+  <div>
+    <h1>Promises</h1>
+
+    <button onclick="fetchPostsWithPromise()">Fetch posts with promise</button>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

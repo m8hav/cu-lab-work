@@ -1,0 +1,25 @@
+header {
+  height: 11.35rem;
+}
+
+#heading {
+  background-color: orange;
+  padding: 2rem;
+}
+
+header nav {
+  background-color: lightcoral;
+  list-style: none;
+  padding: 1rem 2rem;
+}
+
+header nav li {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0 0.5rem 0 0.3rem;
+  border-right: 2px solid black;
+}
+
+header nav li :last-child {
+  border-right: none;
+}

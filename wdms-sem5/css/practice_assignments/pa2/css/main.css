@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  min-height: calc(100vh - 11.35rem - 3rem);
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 525px) {
+  main {
+    flex-direction: column;
+  }
+}

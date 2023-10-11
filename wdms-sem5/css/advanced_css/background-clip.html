@@ -1,0 +1,87 @@
+<!-- https://mgearon.com/css/css-background-clip-text/#:~:text=The%20%E2%80%9Cbackground%2Dclip%3A%20text,different%20values%20you%20can%20use. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #example0 {
+      border: 5px solid black;
+      padding: 1rem;
+    }
+
+    #example0 p {
+      color: transparent;
+      font-size: 2rem;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background: url(./7314.jpg);
+      -webkit-background-clip: text;
+    }
+
+    #example1 {
+      border: 10px dotted black;
+      padding: 15px;
+      background: lightblue;
+      background-clip: border-box;
+    }
+
+    #example2 {
+      border: 10px dotted black;
+      padding: 15px;
+      background: lightblue;
+      background-clip: padding-box;
+    }
+
+    #example3 {
+      border: 10px dotted black;
+      padding: 15px;
+      background: lightblue;
+      background-clip: content-box;
+    }
+
+    #example4 {
+      border: 10px dotted black;
+      padding: 15px;
+      background-color: lightblue;
+      -webkit-background-clip: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>The background-clip Property</h1>
+
+  <p>The background-clip property defines how far the background should extend within an element.</p>
+
+  <p>Text with image as background, -webkit-background-clip: text (background-clip: text doesn't work):</p>
+  <div id="example0">
+    <p>The background extends to the edge of the content box.
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, minima blanditiis unde eveniet dignissimos architecto at nam consectetur autem doloribus beatae natus fugit repudiandae. At vero inventore ducimus distinctio illum, fugit perspiciatis ut! Repellendus recusandae dolorem sint totam! Nemo magni tempora veritatis earum, voluptas ratione dolores eveniet ex nesciunt quod atque sed in necessitatibus quis eius alias consectetur similique eaque officia eum, beatae, sapiente odio distinctio nostrum. Asperiores laborum praesentium ut, sed minus reiciendis numquam aliquid tempora ex neque fuga porro ipsam repudiandae quos ea accusantium quidem dicta obcaecati rerum. Recusandae, eveniet consectetur. Blanditiis totam qui ipsam rerum sequi eos, dicta et consectetur nisi quod, alias ab minima. Vero mollitia, qui, ullam, amet iste quaerat distinctio minima enim quia sit quibusdam ut illum odit eius. Incidunt ut dolor nobis iste ea a porro totam amet laboriosam consectetur inventore, soluta excepturi quod voluptatibus modi ex harum quia suscipit. Perspiciatis quis, laboriosam esse facere ab sit magnam architecto quo rem distinctio obcaecati ad veniam ullam in at totam alias quisquam. Porro omnis magni temporibus quasi, unde quibusdam nesciunt dolorum, quia voluptatum hic quis ab fuga reprehenderit libero quaerat voluptatem autem veniam doloremque iusto adipisci? Commodi quisquam aspernatur dolores neque! Quod cumque nihil facere aspernatur, aperiam expedita nostrum accusamus, alias hic ipsa sit, numquam molestias excepturi debitis nesciunt doloremque. Illum libero quae minus! Id cumque, recusandae illum culpa totam eos asperiores? Deleniti, dolor numquam suscipit nesciunt iure amet adipisci rerum nulla atque optio sequi corporis quae vitae, quibusdam tempore vel possimus voluptatum, id quidem! At enim voluptate accusantium aperiam doloremque omnis in eaque veniam maxime cum, harum temporibus, quas error. Asperiores accusantium recusandae est, tempora molestias expedita quam? Aut exercitationem ratione est pariatur distinctio quia sunt deleniti cupiditate, laudantium autem quibusdam molestiae molestias quidem. Nulla fugiat consequuntur reprehenderit pariatur doloribus ut amet atque!
+    </p>
+  </div>
+
+  <p>background-clip: border-box (this is default):</p>
+  <div id="example1">
+    <p>The background extends behind the border.</p>
+  </div>
+
+  <p>background-clip: padding-box:</p>
+  <div id="example2">
+    <p>The background extends to the inside edge of the border.</p>
+  </div>
+
+  <p>background-clip: content-box:</p>
+  <div id="example3">
+    <p>The background extends to the edge of the content box.</p>
+  </div>
+
+  <p>[-webkit-background-clip: border-box] without simple [background-clip], and background-color instead of background:</p>
+  <div id="example4">
+    <p>The background extends to the edge of the content box.</p>
+  </div>
+
+</body>
+
+</html>

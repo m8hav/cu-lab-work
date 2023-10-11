@@ -1,0 +1,83 @@
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 10px 20px;
+}
+
+img {
+  width: 98%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+caption {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+body table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin: 20px auto;
+}
+
+label,
+input {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  margin: 10px;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: #fff;
+}

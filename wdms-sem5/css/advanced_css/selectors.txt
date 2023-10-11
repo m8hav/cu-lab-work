@@ -1,0 +1,16 @@
+https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+
+direct child:
+div > p {
+  bla bla bla
+}
+
+adjacent sibling:
+div + p {
+  color: red;
+}
+
+attribute selector:
+selector[attribute_name = value] {
+
+}

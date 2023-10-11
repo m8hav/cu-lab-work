@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 32px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > div {
+  border: 5px solid black;
+}
+
+div {
+  padding: 0.5rem;
+  width: 50%;
+}
+
+span {
+  display: block;
+  border: 5px solid black;
+}
+
+#div2 {
+  float: left;
+}
+
+#div2 > span {
+  padding: 0.5rem;
+  background-color: lightgreen;
+}
+
+#div3 {
+  float: right;
+}
+
+#div3 > span {
+  padding: 0.5rem;
+  background-color: lightblue;
+}
+
+#div4 {
+  width: 100%;
+  clear: both;
+}
+
+#div4 > span {
+  padding: 0.5rem;
+  background-color: orange;
+}

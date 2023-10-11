@@ -1,0 +1,20 @@
+#right-nav {
+  background-color: lightblue;
+  padding: 2rem;
+  list-style: disc;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  flex-basis: 25%;
+}
+
+#right-nav li {
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 525px) {
+  #right-nav {
+    flex-basis: 100%;
+  }
+}

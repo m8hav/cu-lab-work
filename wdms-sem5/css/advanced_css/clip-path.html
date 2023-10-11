@@ -1,0 +1,47 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path -->
+<!-- https://www.w3schools.com/cssref/playdemo.php?filename=playcss_clip-path -->
+
+<!-- Get clip-path for your shape:
+  https://bennettfeely.com/clippy/
+  
+  Example:
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: #E7E9EB;
+    }
+
+    #myDIV {
+      height: 300px;
+      background-color: #FFFFFF;
+    }
+
+    #blueDIV {
+      position: absolute;
+      width: 100px;
+      background: lightblue;
+      padding: 10px;
+      clip-path: circle(20%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>The clip Property</h1>
+
+  <p>The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.</p>
+
+  <div id="myDIV">
+    <div id="blueDIV">See how different clip-path values will affect this DIV element.</div>
+  </div>
+
+</body>
+
+</html>

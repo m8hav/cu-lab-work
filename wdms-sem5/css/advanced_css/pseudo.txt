@@ -1,0 +1,19 @@
+pseudo classes:
+  - single colon
+
+  :first-child
+  :last-child
+
+  :nth-child()
+
+  :link
+  :hover
+  :visited
+  :active
+  :target
+
+  :focus
+  :read-only
+  :read-write
+
+  many more..

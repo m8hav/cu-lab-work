@@ -1,0 +1,11 @@
+#main-content {
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  padding: 2rem;
+}
+
+#main-content p {
+  margin-bottom: 1rem;
+}
