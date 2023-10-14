@@ -1,0 +1,11 @@
+Important questions you NEED to do:
+
+- All Permutations of a given String
+- Letter Combinations of a Phone Number
+- Restore All Valid IP Addresses
+- Word Search Problem
+
+- Rat in a Maze
+- Land Mining Problem
+- N-Queen Problem
+- Sudoku Solver
