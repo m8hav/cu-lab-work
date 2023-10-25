@@ -1,0 +1,17 @@
+Tagline: Code less, Do more
+
+Bootstrap:
+  - saves time
+  - CSS Library / Framework
+  - pre-written classes that can be plugged
+  - responsive
+  - browser independent
+  - customizability
+
+
+Components of Bootstrap:
+  - CSS
+  - JS Plugins
+  - {Components}
+  - Scaffolding - creating a basic template / skeleton
+  - Customization

@@ -1,0 +1,14 @@
+Tagline: write less, do more
+
+Uses:
+  AJAX-HTTP obj
+    - method
+    - url
+
+  DOM manipulation
+
+  ...
+
+
+Syntax:
+$('selector').action()

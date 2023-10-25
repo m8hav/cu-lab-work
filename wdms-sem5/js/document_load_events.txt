@@ -1,0 +1,5 @@
+JS Events Difference:
+
+DOMContentLoaded - the whole document (HTML) has been loaded, without waiting for resources to finish loading.
+load - the whole document and its resources (e.g. images, iframes, scripts) have been loaded.
+

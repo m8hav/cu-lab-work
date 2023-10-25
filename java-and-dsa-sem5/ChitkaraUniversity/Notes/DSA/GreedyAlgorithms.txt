@@ -1,0 +1,17 @@
+- When it's required to make a sequence of choices to achieve a global optimum.
+- At each stage, make the next choice based on some local criterion.
+- Never go back and revise an earlier decision.
+- Drastically reduces space to search for solutions.
+
+Example Algorithms:
+    - Dijkstra's Algorithm
+    - Prim's Algorithm
+    - ...
+
+Example Problems:
+    - Largest Number Problem
+    - Coin Change Problem
+    - Interval Scheduling Problem
+    - Job Sequencing Problem with Deadline
+    - Fractional Knapsack Problem
+    - Huffman Coding

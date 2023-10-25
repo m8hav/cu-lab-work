@@ -1,0 +1,9 @@
+JS Events Difference:
+
+DOMContentLoaded - the whole document (HTML) has been loaded, without waiting for resources to finish loading.
+load - the whole document and its resources (e.g. images, iframes, scripts) have been loaded.
+
+
+(not sure about this below)
+We don't need to use DOMContentLoaded event when using defer attribute in script tag, because the script will be executed after the DOMContentLoaded event.
+ 

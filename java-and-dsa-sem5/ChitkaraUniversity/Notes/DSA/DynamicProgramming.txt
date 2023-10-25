@@ -1,0 +1,24 @@
+DYNAMIC PROGRAMMING
+
+Dynamic programming is a technique that uses past knowledge to solve future problems. It breaks down problems into smaller sub-problems, solves each sub-problem once, and stores the solutions. The solutions can then be reused and combined to solve the larger problem.
+
+Dynamic Programming is just a futuristic way of remembering past results and using those results to solve further problems without solving the same problem again and again.
+
+
+Two ways to tackle dynamic programming problems:
+
+1. Memoization (Top-down approach)
+    - I will be an amazing coder. How? I will work hard like crazy. How? I'll practice more and try to improve. How? I'll start taking part in contests. Then? I'll practice. How? I'm going to learn programming.
+
+2. Tabulation (Bottom-up approach)
+    - better approach
+    - I'm going to learn programming. Then, I'll start practicing. Then, I'll start taking part in contests. Then I'll practice even more and try to improve. After working hard like crazy, I'll be an amazing coder.
+
+
+Questions we'll do:
+    - Fibonacci Series
+    - Coin Change Problem
+    - Count the Minimum Cost/Path
+    - Count the Paths/Stairs
+    - Knapsack Problem
+    - Matrix Chain Ordering Problem
