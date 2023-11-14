@@ -54,7 +54,7 @@ Two types of Generics:
 
 Type Parameter Naming Conventions:
     - By convention, type parameter names are single, uppercase letters.
-    - Without its naming convention, it would be difficult to tell the difference between a type variable annd an ordinary class or interface name;
+    - Without its naming convention, it would be difficult to tell the difference between a type variable and an ordinary class or interface name;
     - The most commonly used type parameter names are:
         E - Element (used extensively by the Java Collections Framework)
         K - Key
@@ -98,3 +98,11 @@ Wildcards:
         List <? super Integer>
             - represents a list of Integer or its supertypes (like Number or Object)
 
+Bounded Type Parameters vs Wildcards:
+    Bounded generics are used to specify that a generic type can only be used with certain types or subtypes.
+    For example, a List<Number> can only be used with Number or its subtypes, such as Integer and Double.
+
+    Wildcards are used to specify that a generic type can be used with any type or subtype, but with some restrictions.
+    For example, a `List<? extends Number>` can be used with any type that is a subclass of Number.
+
+    The main difference between bounded generics and wildcards is that bounded generics are more restrictive, but they also provide more type safety. Wildcards are less restrictive, but they can also be less type safe.

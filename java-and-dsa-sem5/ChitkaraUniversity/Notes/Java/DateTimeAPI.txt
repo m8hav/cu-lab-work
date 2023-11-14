@@ -14,9 +14,9 @@ Legacy Date Time API (Prior to Java 8)
     Java community continuously complained about the problems in effectively using these classes.
 
 Legacy Date-Time API Issues:
-    - A Date class shall represent a date, but it represents an instance which has hour, minutes and seconds as well.
-    - But Date doesn't have any associated time zone. It picks up the default timezone automatically. You cannot represent a date some other timezone.
-    - Classes are mutable. So that leaves additional burden on developers to clone the date before passing a function, which can mutate it.
+    - A Date class should represent a date, but it represents an instance which has hour, minutes and seconds as well.
+    - But Date doesn't have any associated time zone. It picks up the default timezone automatically. You cannot represent a date of some other timezone.
+    - Classes are mutable. So that leaves additional burden on developers to clone the date before passing to a function, which can mutate it.
     and many more...
 
 Main Issues:
@@ -27,11 +27,11 @@ Main Issues:
 
 DateTime API since Java 8:
     Classes:
-        - Clock
-        - Duration
         *- LocalDate
         *- LocalDateTime
         *- LocalTime
+        - Clock
+        - Duration
         ...
     Enums:
         ...

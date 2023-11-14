@@ -31,7 +31,7 @@ Marker Interface
         2. Serializable
             - java.io.Serializable
             - indicates the objects of this class can be serialized
-            - Serialization is the conversion of a Java object into a static stream (sequence) of bytes, which we can them save to a database or transfer over a network.
+            - Serialization is the conversion of a Java object into a static stream (sequence) of bytes, which we can then save to a database or transfer over a network.
             - the serialization process is instance-independent. For example, we can serialize objects on one platform and deserialize them on another.
             - all subclasses are serializable as well.
             - if Serializable class has reference to other class, then these classes need to be Serializable too.

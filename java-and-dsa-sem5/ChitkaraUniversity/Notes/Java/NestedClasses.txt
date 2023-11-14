@@ -4,7 +4,8 @@
 Nested classes are not the same as Inner Classes.
 Non-Static category of Nested Classes is what is also referred to as Inner Classes
 
-Non-Static/Inner classes can be used to implement helper classes
+Non-Static/Inner classes can be used to implement helper classes.
+
 Non-Static/Inner classes have 2 additional types:
     2.1 Local Classes
         - inner classes declared within the body of a method

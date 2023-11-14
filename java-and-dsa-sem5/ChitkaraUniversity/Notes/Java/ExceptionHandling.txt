@@ -93,7 +93,7 @@ TYPES OF EXCEPTIONS:
         - not subject to the Catch or Specify Requirements
         - RuntimeException class and all of its subclasses are unchecked exceptions
         - occur at run time
-        - not checked by compile time by Java compiler and hence are called Unchecked Exceptions.
+        - not checked at compile time by Java compiler and hence are called Unchecked Exceptions.
         - doesn't REQUIRE to be dealt with for the program to compile
             - but the exception is going to occur at runtime if it's not dealt with using try catch blocks or throws declaration.
         Example:

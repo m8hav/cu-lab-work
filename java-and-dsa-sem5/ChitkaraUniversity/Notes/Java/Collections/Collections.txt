@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=VphowcSkBX4&ab_channel=ApnaCollege
+^ reference video from Apna College
+
+In Visuals:
+- Pink Boxes are Interfaces
+- Blue Boxes are Classes
+- Orange Boxes are Methods
