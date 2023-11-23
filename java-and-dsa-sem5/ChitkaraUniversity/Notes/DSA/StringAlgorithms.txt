@@ -1,0 +1,19 @@
+STRING SEARCH ALGORITHMS
+
+KMP - Knuth-Morris-Pratt:
+
+The problem with the naive approach is that when it discovers a mismatch,
+it moves to th next position in the text T,
+and starts comparing the word W from the beginning.
+
+The KMP algorithm performs some analysis on the word W
+before trying to find its occurrences in the text T.
+
+- It works on the proper prefix (from LHS) and proper suffix (from RHS).
+- It uses a pre-generated table called a prefix table or pie table or longest proper prefix table.
+- A prefix table helps to skip certain comparisons.
+
+In simple, we can say, KMP is an improved version of the Naive Algorithm for the haystack with a needle appearing ...?
+
+Time Complexity: O(n + m) : O(n)
+Space Complexity: O(m)

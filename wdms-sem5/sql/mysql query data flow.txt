@@ -1,0 +1,11 @@
+DB Request Flow:
+
+request to DB:
+
+fetch the requested data - select column_name(s) from table_name
+filter selected - where
+group same - group by
+filter grouped - having
+order end result - order by
+limit to first n results - limit
+ouput
