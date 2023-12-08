@@ -1,5 +1,3 @@
-STRING SEARCH ALGORITHMS
-
 KMP - Knuth-Morris-Pratt:
 
 The problem with the naive approach is that when it discovers a mismatch,

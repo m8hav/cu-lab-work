@@ -72,11 +72,13 @@ desc student;
 select * from student;
 
 
--- delete all rows where marks less than 80%
-set maxMarks = 100;
+-- select / delete all rows where marks less than 80%
 
-delete from student
-where marks < max(marks);
+-- declare variables
+set @maxMarks = 100;
+
+select * from student
+where marks > @maxMarks * 0.8;
 
 set sql_safe_updates = 1;
 

@@ -1,0 +1,28 @@
+Rabin-Karp Algorithm:
+
+1. Hashing
+2. Sliding Window
+
+It uses Rolling-Hash that very quickly generates hash values for the entire text.
+
+
+The Rabin-Karp or Karp-Rabin algorithm is a string searching algorithm creaetd by Richard M. Karp and Michael O. Rabin in (1987).
+
+This algorithm uses hashing to find an exact match of a pattern string within a larger text.
+
+It uses a rolling-hash to quickly filter our positions of the text that cannot match the pattern, and then checkes for a match at the remaining positions.
+
+A practical application of the algorithm is detecting plagiarism.
+
+Generalizations of the same idea can be used to find more than one match of a single pattern, or to find matches for more than one pattern.
+
+The algorithm has an average-case time complexity of O(n + m),
+n = length of string, and m = length of pattern
+
+Time Complexity:
+    Best Case: O(n + m)
+    Average Case: O(n + m)
+    Worst Case: O(n + m)
+    For example: pat[] = "AAA" and txt[] = "AAAAAAA"
+
+Space Complexity: O(m)

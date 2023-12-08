@@ -1,0 +1,92 @@
+Tree
+
+A tree is a non-linear hierarchical data structure.
+
+It's like nature's way of organizing information in computer science.
+
+Think of a tree with its roots, branches, and leaves
+- similarly, a tree data structure has a root node,
+connected by edges to other nodes forming a hierarchical structure
+
+Root:
+Edge:
+Node:
+Leaves:
+Level:
+    starts from 0 / 1 (usually 0)
+    Root node is level 0
+    Root's direct children are level 1
+    further direct children are level 2
+    and so on...
+Depth:
+    The depth of a node is the number of edges from the root to the node.
+    The depth of the tree is the depth of its deepest leaf node.
+Height:
+    The height of a node is the number of edges from the node to the deepest leaf from that given node.
+    The height of a tree is a height of the root.
+
+
+Types of Trees:
+    1.  General Tree:
+            - General trees offer flexibility in organizing hierarchical data
+            where the number of child nodes for each parent can vary.
+            - They are used in scenarios like file systems, organization hierarchies,
+            representing XML/HTML structures, decision trees in artificial intelligence,
+            and more.
+    2.  Binary Tree:
+            - Each Node has 2 children except last node
+    3.  Binary Search Tree:
+            - A binary tree where the left node of a node
+            contains a value lesser than its parent,
+            and the right child contains a value greater than its parent.
+            - This structure enables efficient searching, insertion and deletion operations.
+    4.  Self-Balancing Tree:
+        AVL Tree:
+            - A self-balancing BST where
+            the heights of the two child subtrees
+            of any node differ by at most one.
+            - Balancing is maintained during insertions and deletions
+            to ensure logarithmic time complexity for operations.
+    5.  Red-Black Tree:
+            - A self-balancing BST where each node
+            contains an extra bit for representing color,
+            either red or black.
+            - This structure maintains balance
+            by enforcing specific rules on coloring and rotation
+            ensuring logarithmic time for operations.
+    6.  Trie (Prefix Tree)
+            - A tree-like data structure
+            used to efficiently store and retrieve a dynamic set of strings.
+            - Commonly used for dictionaries and spell checkers,
+            each node represents a common prefix shared by strings.
+    7.  B-Tree:
+            - A self-balancing tree structure designed for disk storage,
+            where nodes can have more than two children.
+            - B-trees are optimized for systems that read and write large blocks of data,
+            commonly used in databases and file systems.
+            - BEST for large data
+
+
+Advantages and Limitations:
+    General Trees:
+        Pros:
+            Versatility:
+                General trees allow for versatile hierarchical data representation as they permit each node to have an arbitrary number of child nodes. This flexibility makes them suitable for a wide range of applications.
+
+        Cons:
+            ...
+
+    Binary Tree
+
+    Binary Search Tree:
+        It is a data structure that allows for fast insertion removal and lookup of items while offering the same flexibility as a general tree.
+        For each node, its value must be less than the right subtree and greater than those in the left subtree.
+        As a result, lookup, insertion and removal operations have a complexity of O(log n) in the average case.
+        Properties:
+            Max number of nodes at level i: 2^i
+            Max number of nodes in a tree of height h:
+                h starts with 0: 2^(h+1) - 1
+                h starts with 1: 2^h - 1
+            Left Child: 2*i
+            Right Child: 2*i + 1
+            Parent: node_index / 2
