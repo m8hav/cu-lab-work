@@ -1,7 +1,13 @@
-package dsa.tree.binaryTree.binarySearchTree;
+package dsa.tree.binaryTree.binarySearchTree.checkSubtree;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Queue;
+
+/*
+Use any kind of traversal, just not level order traversal.
+ */
 
 class Node {
     private int value;
@@ -46,6 +52,12 @@ public class BinarySearchTree {
         root = null;
     }
 
+    public void addAll(int[] values) {
+        for (int value : values) {
+            add(value);
+        }
+    }
+
     public void add(int value) {
         root = addNode(root, value);
     }
@@ -82,6 +94,22 @@ public class BinarySearchTree {
             if (node.getLeft() != null) queue.add(node.getLeft());
             if (node.getRight() != null) queue.add(node.getRight());
         }
+    }
+
+    public List<Integer> preOrderTraversal() {
+        List<Integer> list = new ArrayList<>();
+        preOrderTraversal(root, list);
+        return list;
+    }
+
+    private void preOrderTraversal(Node currentRoot, List<Integer> list) {
+        if (currentRoot == null) {
+            list.add(null);
+            return;
+        }
+        list.add(currentRoot.getValue());
+        preOrderTraversal(currentRoot.getLeft(), list);
+        preOrderTraversal(currentRoot.getRight(), list);
     }
 
     public boolean search(int value) {
@@ -138,30 +166,65 @@ public class BinarySearchTree {
         return currentRoot.getLeft() == null ? currentRoot.getValue() : findMinValue(currentRoot.getLeft());
     }
 
+    public String toStringSeparatedByComma() {
+        StringBuilder sb = new StringBuilder();
+        List<Integer> list = this.preOrderTraversal();
+        for (Integer i : list) {
+            sb.append(i);
+            sb.append(", ");
+        }
+        return sb.toString();
+    }
+
+    public boolean containsSubtree(BinarySearchTree t2) {
+        return this.toStringSeparatedByComma()
+                .contains(t2.toStringSeparatedByComma());
+    }
+
+    public boolean isSameTree(BinarySearchTree t2) {
+        return this.toStringSeparatedByComma()
+                .equals(t2.toStringSeparatedByComma());
+    }
+
     public static void main(String[] args) {
-        BinarySearchTree bst = new BinarySearchTree();
+        int[] values1 = {6, 4, 8, 3, 5, 7, 9};
+        int[] values2 = {4, 3, 5};
+        int[] values3 = {3, 4, 5};
+        int[] values4 = {6, 8, 4, 5, 3, 9, 7};
+        int[] values5 = {4, 3, 5, 7, 9};
 
-        bst.add(10);
-        bst.add(15);
-        bst.add(1);
-        bst.add(20);
-        bst.add(25);
-        bst.add(5);
-        bst.add(7);
-        bst.add(12);
-        bst.add(-4);
-        bst.add(18);
-        bst.add(6);
 
-        /*
-                    10
-              1            15
-          -4     5     12     20
-                   7        18    25
-                 6
-         */
+        BinarySearchTree t1 = new BinarySearchTree();
+        t1.addAll(values1);
+        BinarySearchTree t2 = new BinarySearchTree();
+        t2.addAll(values2);
+        BinarySearchTree t3 = new BinarySearchTree();
+        t3.addAll(values3);
+        BinarySearchTree t4 = new BinarySearchTree();
+        t4.addAll(values4);
+        BinarySearchTree t5 = new BinarySearchTree();
+        t5.addAll(values5);
 
-        bst.levelOrderTraversal();
+        System.out.println("Binary Trees Pre-Order Traversals:");
+        System.out.println("T1: " + t1.toStringSeparatedByComma());
+        System.out.println("T2: " + t2.toStringSeparatedByComma());
+        System.out.println("T3: " + t3.toStringSeparatedByComma());
+        System.out.println("T4: " + t4.toStringSeparatedByComma());
+        System.out.println("T5: " + t5.toStringSeparatedByComma());
+        System.out.println();
+
+        System.out.println("T1 contains subtree:");
+        System.out.println("T2: " + t1.containsSubtree(t2));
+        System.out.println("T3: " + t1.containsSubtree(t3));
+        System.out.println("T4: " + t1.containsSubtree(t4));
+        System.out.println("T5: " + t1.containsSubtree(t5));
+        System.out.println();
+
+        System.out.println("T1 is same tree as:");
+        System.out.println("T2: " + t1.isSameTree(t2));
+        System.out.println("T3: " + t1.isSameTree(t3));
+        System.out.println("T4: " + t1.isSameTree(t4));
+        System.out.println("T5: " + t1.isSameTree(t5));
 
     }
 }

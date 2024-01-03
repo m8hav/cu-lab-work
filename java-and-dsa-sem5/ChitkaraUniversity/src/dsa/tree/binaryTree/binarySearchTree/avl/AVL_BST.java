@@ -1,4 +1,4 @@
-package dsa.tree.binaryTree.binarySearchTree;
+package dsa.tree.binaryTree.binarySearchTree.avl;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -39,10 +39,10 @@ class Node {
     }
 }
 
-public class BinarySearchTree {
+public class AVL_BST {
     private Node root;
 
-    public BinarySearchTree() {
+    public AVL_BST() {
         root = null;
     }
 
@@ -139,7 +139,7 @@ public class BinarySearchTree {
     }
 
     public static void main(String[] args) {
-        BinarySearchTree bst = new BinarySearchTree();
+        AVL_BST bst = new AVL_BST();
 
         bst.add(10);
         bst.add(15);

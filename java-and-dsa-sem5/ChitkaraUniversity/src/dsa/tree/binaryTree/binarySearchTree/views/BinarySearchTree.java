@@ -1,4 +1,4 @@
-package dsa.tree.binaryTree.binarySearchTree;
+package dsa.tree.binaryTree.binarySearchTree.views;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -137,6 +137,8 @@ public class BinarySearchTree {
     private int findMinValue(Node currentRoot) {
         return currentRoot.getLeft() == null ? currentRoot.getValue() : findMinValue(currentRoot.getLeft());
     }
+
+
 
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
