@@ -1,0 +1,20 @@
+Node JS
+
+
+good for following because of asynchronous programming:
+  Filesystem:
+    fs - File System module
+  Operating System:
+    os - Operating System module
+  Network:
+    http - Http module
+
+very bad for following because of asynchronous programming:
+  CPU Intensive Operations
+    - Graphics, etc.
+
+JavaScript is a compiled language. It is compiled at runtime by the JavaScript engine.
+
+
+__filename - path to current directory, including file name, keeps track of file names
+__dirname - path to current file

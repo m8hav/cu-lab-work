@@ -1,0 +1,1 @@
+Run customEmitterTest2.js to see results
