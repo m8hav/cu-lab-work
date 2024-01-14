@@ -1,0 +1,116 @@
+Trees are nothing more than restricted of graphs, just with any more rules to follow.
+
+A tree will always be a graph, but npt all graphs are trees.
+
+Graphs are made up of nodes and edges.
+There are many applications for graph structures in the real world, such as:
+- social networks
+- location / mapping
+- routing algorithms
+- visual hierarchy
+- file system optimizations
+
+Example:
+Social Media
+- people are nodes, and the connections are edges
+- people link to many other people, but not all people are connected to each other
+
+Graphs are one of the most common data structures in computer science.
+
+A graph, in simple, is nothing but a collection of vertices and edges
+that can be represented as either an adjacency matrix or an adjacency list.
+
+Java doesn't have a default implementation of the graph data structure.
+
+Main classifications of graphs are:
+    - Directed and Undirected
+    - Weighted and Unweighted
+    - Cyclic and Acyclic
+    - Connected and Disconnected
+Main subtypes of graphs:
+    - directed
+    - undirected
+    - weighted
+    - unweighted
+Types of Graphs:
+    - Undirected, Unweighted graph
+        - edges have no direction
+        - edges have no value
+    - Undirected, Weighted graph
+        - edges have no direction
+        - edges have a value
+    - Directed, Unweighted graph
+        - edges have a direction
+        - edges have no value
+    - Directed, Weighted graph
+        - edges have a direction
+        - edges have a value
+
+
+* V is the number of vertices, and E is the number of edges in a graph.
+
+
+Graph Representation:
+    Graph Representation means the approach or technique using which graph data is stored in the computer's memory.
+    Two main representations of graphs:
+        - Adjacency Matrix
+            - A two-dimensional matrix, in which the rows represent source vertices and columns represent destination vertices.
+            - Data is stored in the form of a matrix.
+            - If there is an edge from vertex i to vertex j, then a[i][j] = 1 else a[i][j] = 0.
+            - This representation is most suitable when the number of edges in a graph is large.
+            - This representation is not suitable for sparse graphs.
+            - Space complexity is O(V^2).
+            - Time complexity to find if there is an edge from vertex u to vertex v is O(1).
+            - Time complexity to delete an edge is O(1).
+            - Time complexity to insert an edge is O(1).
+            - Time complexity to find all edges that contain vertex v is O(V).
+        - Adjacency List
+            - An array of lists is used. The size of the array is equal to the number of vertices.
+            - Let the array be an array[]. An entry array[i] represents the list of vertices adjacent to the ith vertex.
+            - This representation can also be used to represent a weighted graph.
+            - This representation is most suitable when the number of edges in a graph is small.
+            - This representation is not suitable for dense graphs.
+            - This representation is suitable for sparse graphs.
+            - Space complexity is O(V + E).
+            - Time complexity to find if there is an edge from vertex u to vertex v is O(V).
+            - Time complexity to delete an edge is O(E).
+            - Time complexity to insert an edge is O(1).
+            - Time complexity to find all edges that contain vertex v is O(1).
+
+
+Traversals:
+    DFS
+    BFS
+
+    BFS is faster than DFS
+
+
+Graph Problems:
+    To check if Undirected Graph is connected or not.
+    To check if Directed Graph is STRONGLY connected or not.
+    To check if Source to Destination is reachable or not in Undirected Graph or not.
+    To check if Source to Destination Path exists in Directed Graph or not.
+
+
+DCG - Directed Cyclic Graph
+DAG - Directed Acyclic Graph
+
+Topological Ordering:
+    - only applies to DAG, not DCG, because cycles of DCG cause issues in making a topological ordering.
+
+
+
+How to find cycles in a graph - Undirected and Directed
+    - if the neighbor is already visited and is NOT the parent, a cycle is formed.
+
+    Example:
+    0 - 1 - 3
+        |   |
+        2 - 4 - 5
+
+    here, 3 is not a cycle because 3 is the parent of 4
+          |
+          4
+
+    but a cycle is formed when 1 is visited from 2 and 2's parent is 4
+    because 1 is already visited and not the parent.
