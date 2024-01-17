@@ -6,6 +6,16 @@ import java.util.*;
 
 Directed Graph Strongly Connected or Not
 
+Sir said:
+Directed / Undirected edge exists between every pair of nodes,
+no matter from which direction
+
+Online definition says:
+A path exists between all pairs of vertices.
+i.e. each vertex should be reachable from every other vertex,
+even if you have to move through multiple other vertices.
+i.e. a direct edge not required
+
  */
 
 public class CheckGraphStronglyConnected {
@@ -100,32 +110,37 @@ public class CheckGraphStronglyConnected {
 
         System.out.println("Graph strongly connected: " + graph.isStronglyConnected());
 
-        // Test Case 1: strongly connected
-        // 0 - 1
-        // | x |
-        // 2 - 3
-        // Vertices: 4
-        // Edges: 6
-        // Connect Vertices:
-        // 0 1
-        // 0 2
-        // 0 3
-        // 1 2
-        // 1 3
-        // 2 3
+        /*
 
-        // Test Case 2: not connected
-        // 0 - 1 - 3 - 5
-        //     |   |
-        //     2 - 4
-        // Vertices: 6
-        // Edges: 5
-        // Connect Vertices:
-        // 0 1
-        // 1 2
-        // 1 3
-        // 2 4
-        // 3 4
+        Test Case 1: strongly connected
+        0 - 1
+        | x |
+        2 - 3
+        Vertices: 4
+        Edges: 6
+        Connect Vertices:
+        0 1
+        0 2
+        0 3
+        1 2
+        1 3
+        2 3
+
+        Test Case 2: not connected
+        0 - 1 - 3 - 5
+            |   |
+            2 - 4
+        Vertices: 6
+        Edges: 5
+        Connect Vertices:
+        0 1
+        1 2
+        1 3
+        2 4
+        3 4
+
+         */
+
     }
 
 }
