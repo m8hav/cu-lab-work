@@ -127,6 +127,11 @@ If there is any negative edge,
 NEVER use Dijkstra's Algorithm.
 Only use Bellman Ford's or Floyd Warshall's Algorithm
 
+Bellman Ford's Algo fails:
+    - if there is a cycle with negative total weight
+    i.e. sum of weight of all edges < 0
+    this is because the cycle keeps on going if we traverse more than V-1 times
+
 
 
 SPANNING TREE:

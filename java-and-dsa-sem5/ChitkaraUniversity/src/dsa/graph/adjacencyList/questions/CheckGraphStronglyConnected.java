@@ -16,6 +16,19 @@ i.e. each vertex should be reachable from every other vertex,
 even if you have to move through multiple other vertices.
 i.e. a direct edge not required
 
+So, I think, online definition is correct.
+
+According to code, online definition is correct.
+
+In a directed graph:
+if there is no outgoing edge from a vertex,
+then it is not strongly connected.
+(not sure about cases where every node has an outgoing edge
+and still it is not strongly connected)
+
+If there is no incoming edge to a vertex,
+then it is not strongly connected.
+
  */
 
 public class CheckGraphStronglyConnected {
@@ -112,10 +125,11 @@ public class CheckGraphStronglyConnected {
 
         /*
 
-        Test Case 1: strongly connected
+        Test Case 1: not strongly connected
         0 - 1
         | x |
         2 - 3
+        (directed according to given edges direction)
         Vertices: 4
         Edges: 6
         Connect Vertices:
@@ -126,18 +140,20 @@ public class CheckGraphStronglyConnected {
         1 3
         2 3
 
-        Test Case 2: not connected
-        0 - 1 - 3 - 5
-            |   |
-            2 - 4
-        Vertices: 6
+        Test Case 2: strongly connected
+        0 - 1
+        | x |
+        2 - 3
+        (directed according to given edges direction)
+        Vertices: 4
         Edges: 5
         Connect Vertices:
         0 1
-        1 2
+        0 2
         1 3
-        2 4
-        3 4
+        2 3
+        3 0
+
 
          */
 

@@ -1,0 +1,31 @@
+A trie is an ordered data structure, a type of search tree used to store associative data structures.
+
+Wikipedia Definition:
+In computer science, a trie, also called digital tree or prefix tree,
+is a type of k-ary search tree,
+a tree data structure used for locating specific keys from within a set.
+These keys are most often strings,
+with links between nodes defined not by the entire key,
+but by individual characters.
+
+A compressed trie is essentially a tree data structure
+with an additional rule that every node has to have two or more children.
+
+A trie is pronounced "try", although the name trie is derived from "retrieval".
+
+The trie data structure is well-suited to matching algorithms,
+as they are based on the prefix of each string.
+Tries are typically employed for solving problems of matching and retrieval,
+where strings are associated with keys and values.
+
+But what exactly is a trie?
+
+Tries are neglected data structures, found in books but rarely in standard libraries.
+
+A trie is a tree-like data structure
+where in the nodes of the tree store the entire alphabet,
+and strings/words can be re*trie*ved by traversing down branch path of the tree.
+
+In order to access a key (to recover its value, change it, or remove it),
+the trie is traversed depth-first, following the links between nodes,
+which represent each character in the key.

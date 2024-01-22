@@ -4,6 +4,16 @@ import java.util.*;
 
 public class BellmanFord {
 
+    static class Node {
+        public int destination;
+        public int weight;
+
+        public Node(int destination, int weight) {
+            this.destination = destination;
+            this.weight = weight;
+        }
+    }
+
     static class Edge {
         public int source;
         public int destination;
@@ -16,21 +26,28 @@ public class BellmanFord {
         }
     }
 
+    //    private static final double INFINITY = Double.POSITIVE_INFINITY;
     private static final int INFINITY = Integer.MAX_VALUE;
-    private List<Edge> edges;
-    private int vertices;       // nodes
+    private final List<Edge> edges;
+    private final int vertices;       // nodes
+    private final List<List<Node>> adjacencyList;
 
     public BellmanFord(int vertices) {
         this.vertices = vertices;
         edges = new ArrayList<>();
+        adjacencyList = new ArrayList<>();
+        for (int i = 0; i < vertices; i++)
+            adjacencyList.add(new ArrayList<>());
     }
 
     public void addEdge(int source, int destination, int weight) {
         edges.add(new Edge(source, destination, weight));
+        adjacencyList.get(source).add(new Node(destination, weight));
     }
 
     // Bellman Ford Algorithm
-    public void doFindShortPathDistance(int source) {
+    public int[] findShortestPathDistance(int source) {
+//        double[] distance = new double[vertices];
         int[] distance = new int[vertices];
         Arrays.fill(distance, INFINITY);
 
@@ -49,41 +66,51 @@ public class BellmanFord {
                 }
             }
         }
+
+        return distance;
     }
 
-//    public void doDepthFirstTraversal(int startingNode, boolean[] visited) {
-//        Stack<Integer> stack = new Stack<>();
-//
-//        stack.push(startingNode);
-//
-//        while (!stack.isEmpty()) {
-//            int currentNode = stack.pop();
-//
-//            if (!visited[currentNode]) {
-//                visited[currentNode] = true;
-//
-//                for (Integer neighbor : adjacencyList[currentNode])
-//                    if (!visited[neighbor]) stack.push(neighbor);
-//            }
-//        }
-//    }
-//
-//    public void doBreadthFirstTraversal(int startingNode, boolean[] visited) {
-//        Queue<Integer> queue = new ArrayDeque<>();
-//
-//        queue.add(startingNode);
-//
-//        while (!queue.isEmpty()) {
-//            int currentNode = queue.poll();
-//
-//            if (!visited[currentNode]) {
-//                visited[currentNode] = true;
-//
-//                for (Integer neighbor : adjacencyList[currentNode])
-//                    if (!visited[neighbor]) queue.add(neighbor);
-//            }
-//        }
-//    }
+    public void doDepthFirstTraversal(int startingNode, boolean[] visited) {
+        if (visited == null) visited = new boolean[vertices];
+
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(startingNode);
+
+        while (!stack.isEmpty()) {
+            int currentNode = stack.pop();
+
+            if (!visited[currentNode]) {
+                visited[currentNode] = true;
+                System.out.print(" - " + currentNode);
+
+                for (Node neighbor : adjacencyList.get(currentNode))
+                    if (!visited[neighbor.destination]) stack.push(neighbor.destination);
+            }
+        }
+        System.out.println();
+    }
+
+    public void doBreadthFirstTraversal(int startingNode, boolean[] visited) {
+        if (visited == null) visited = new boolean[vertices];
+
+        Queue<Integer> queue = new ArrayDeque<>();
+
+        queue.add(startingNode);
+
+        while (!queue.isEmpty()) {
+            int currentNode = queue.poll();
+
+            if (!visited[currentNode]) {
+                visited[currentNode] = true;
+                System.out.print(" - " + currentNode);
+
+                for (Node neighbor : adjacencyList.get(currentNode))
+                    if (!visited[neighbor.destination]) queue.add(neighbor.destination);
+            }
+        }
+        System.out.println();
+    }
 
     public void showList() {
         for (Edge edge : edges) {
@@ -113,16 +140,23 @@ public class BellmanFord {
             graph.addEdge(nodeSource, nodeDestination, nodeWeight);
         }
 
+        System.out.println("Edges:");
         graph.showList();
 
-        System.out.println("Shortest Distances: ");
+        System.out.println("Depth First Traversal");
+        graph.doDepthFirstTraversal(0, null);
+
+        System.out.println("Breadth First Traversal");
+        graph.doBreadthFirstTraversal(0, null);
+
+        System.out.println("Shortest Distances:");
+        System.out.println(Arrays.toString(graph.findShortestPathDistance(0)));
 
         /*
             Test Case 1:
             Vertices: 6
             Edges: 6
             Source: 0
-            Destination: 3
             Connect Edges (Source Destination Weight):
             0 1 8
             0 2 5
@@ -135,7 +169,6 @@ public class BellmanFord {
             Vertices: 3
             Edges: 3
             Source: 0
-            Destination: 3
             Connect Edges (Source Destination Weight):
             0 1 8
             0 2 5
